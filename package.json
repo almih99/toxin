@@ -1,0 +1,31 @@
+{
+  "name": "fsd-cv",
+  "version": "1.0.0",
+  "description": "FSD-EP-task-1",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almih99/fsd-cv.git"
+  },
+  "author": "Alexey Mihailenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almih99/fsd-cv/issues"
+  },
+  "homepage": "https://github.com/almih99/fsd-cv#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
