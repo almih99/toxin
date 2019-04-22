@@ -1,4 +1,5 @@
 const path=require("path");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => (
 {
@@ -12,7 +13,9 @@ module.exports = (env, argv) => (
     filename: '[name].js'
   },
   devServer: {
-    overlay: true
+    overlay: true,
+    contentBase: './dist',
+    index: 'test.html'
   },
   devtool: argv.mode === 'production' ? false : 'inline-source-map',
   module: {
@@ -72,14 +75,17 @@ module.exports = (env, argv) => (
           }
         ]
       },
-      // make source-mapping for js files
+      // make translating for js files
       {
         test: /\.js$/,
         use: [
           {
-            loader: 'source-map-loader',
+            loader: 'babel-loader',
             options: {
-              enforce: true
+              exclude: 'node_modules',
+              presets: [
+                '@babel/preset-env'
+              ]
             }
           }
         ]
@@ -97,5 +103,8 @@ module.exports = (env, argv) => (
         ] 
       }
     ]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin()
+  ]
 });
