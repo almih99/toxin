@@ -1,0 +1,30 @@
+
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  min-height: 44px;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+  &:focus {
+    outline: none;
+    box-shadow:0 0 1px 2px white, 0 0 3px 3px rgba(0, 0, 255, 0.479);
+  }
+  &:active {
+    outline: none;
+    box-shadow:0 0 1px 2px white, 0 0 3px 3px rgba(255, 0, 0, 0.452);
+  }
+  &:hover {
+      cursor: pointer;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+    cursor: wait;
+  }
+
+
+
+}

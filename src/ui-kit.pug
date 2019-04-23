@@ -1,0 +1,12 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Страница тестирования ui-kit
+    link(href="index.less" rel="stylesheet" type="text/css")
+    script(src="index.js")
+  body
+    h1 Страница тестирования и отладки элементов интерфейса
+    include components/button/button.pug
+    +button press me, please
+    +button(class="button_disabled") CLICK ME
