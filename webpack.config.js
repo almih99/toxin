@@ -1,5 +1,6 @@
 const path=require("path");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = (env, argv) => (
 {
@@ -75,6 +76,11 @@ module.exports = (env, argv) => (
           }
         ]
       },
+      // load css files
+      {
+        test: /\.css$/,
+        loaders: ["style-loader","css-loader"]
+      },
       // make translating for js files
       {
         test: /\.js$/,
@@ -114,6 +120,12 @@ module.exports = (env, argv) => (
     ]
   },
   plugins: [
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery'",
+      "window.$": "jquery"
+      })
   ]
 });

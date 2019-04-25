@@ -1,36 +1,43 @@
 doctype html
 include components/button/button.pug
-
+include components/slider/slider.pug
 
 html(lang="ru")
   head
     meta(charset="utf-8")
     title Страница тестирования ui-kit
-    link(href="index.less" rel="stylesheet" type="text/css")
     script(src="index.js")
     style.
-      * {outline-: dotted 1px blue;}
+      *- {outline: dotted 1px blue;}
+      .column-holder {display: flex; width:100%; justify-content: space-between;}
+      .column {padding: 10px; width: 30%;}
+      .separator {margin-top: 30px}
+    link(href="index.less" rel="stylesheet" type="text/css")
   body
     h1 Страница тестирования и отладки элементов интерфейса
-    div(style="display: flex; width:100%; justify-content: space-around;")
-      div(style={padding: '10px', "flex-basis": '30%'}) left ljylkj  ldsjjlkd
-      div(style={padding: '10px', "flex-basis": '30%'}) mid
-      div(style={padding: '10px', "flex-basis": '30%'})
-        div(style={"margin-top": "30px"})
+    .column-holder
+      .column
+        +slider(0, 1000, 10, 800)
+      .column
+        +slider(0, 1000, 10, 800)
+      .column
+        .separator
+          +slider(0, 1000, 10, 800)
+        .separator
           +button
             +button__label click me
           +button(disabled="true")
             +button__label CLICK ME
-        div(style={"margin-top": "30px"}) 
+        .separator
           +button
             +button__label(class="button__label_white") CLICK ME
           +button(disabled="disabled")
             +button__label(class="button__label_white") CLICK ME
-        div(style={"margin-top": "30px"})
+        .separator
           +button(class="button_tiny")
             +button__label(class="button__label_tiny") click me
           +button(class="button_tiny" disabled=true)
             +button__label(class="button__label_tiny") click me
-        div(style={"margin-top": "30px"})
+        .separator
           +button(class="button_arrowed")
             +button__label(class="button__label_arrowed") перейти к оплате
