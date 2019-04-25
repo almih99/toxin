@@ -1,28 +1,63 @@
-
 .button {
   display: inline-block;
-  padding: 10px 22px;
-  min-height: 44px;
   border: none;
   border-radius: 22px;
-  color: white;
+  padding: 2px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
   &:focus {
-    outline: none;
-    box-shadow:0 0 1px 2px white, 0 0 3px 3px rgba(0, 0, 255, 0.479);
+    .focused();
   }
   &:active {
-    outline: none;
-    box-shadow:0 0 1px 2px white, 0 0 3px 3px rgba(255, 0, 0, 0.452);
+    .active();
   }
   &:hover {
-      cursor: pointer;
+    cursor: pointer;
   }
-
-  &_disabled {
+  &:disabled {
     opacity: 0.5;
     cursor: wait;
+  }
+
+  &__label {
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+    padding: 10px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold; 
+    text-transform: uppercase;
+  }
+
+  // for making gradient outline
+  &__label_white {
+    color: @purple;
+    border-radius: 18px;
+    background-color: @white;
+  }
+
+  // for link-like buttons
+  &_tiny {
+    background: none;
+  }
+
+  &__label_tiny {
+    color: @purple;
+    padding: 0px 5px;
+  }
+
+  // for label with arrow
+  &__label_arrowed {
+    position: relative;
+    padding-left: 80px;
+    padding-right: 80px;
+    &::after {
+      position: absolute;
+      content: url(arrow.svg);
+      top: 8px;
+      right: 10px;
+    }
   }
 
 

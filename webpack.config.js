@@ -15,7 +15,7 @@ module.exports = (env, argv) => (
   devServer: {
     overlay: true,
     contentBase: './dist',
-    index: 'test.html'
+    index: 'ui-kit.html'
   },
   devtool: argv.mode === 'production' ? false : 'inline-source-map',
   module: {
@@ -92,7 +92,7 @@ module.exports = (env, argv) => (
       },
       // copy files
       {
-        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.wav$|\.mp3$/,
         use: [
           {
             loader: 'file-loader',
@@ -101,6 +101,15 @@ module.exports = (env, argv) => (
             }
           }
         ] 
+      },
+      {
+        test: /\.ttf$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]'
+          }
+        }
       }
     ]
   },

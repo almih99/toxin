@@ -1,0 +1,28 @@
+@import '../fonts/googlefonts.less';
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Quicksand', sans-serif;
+
+// base colors
+@dark-100: #1F2041;
+@dark-75: lighten(@dark-100, 25%);
+@dark-50: lighten(@dark-100, 50%);
+@dark-25: lighten(@dark-100, 75%);
+@white: white;
+@purple: #bc9cff;
+@green: #6fcf97;
+// special-colors
+@focus-shadow-color: rgba(0, 0, 255, 0.479);
+@active-shadow-color: rgba(255, 0, 0, 0.452);
+@fence-shadow-color: white;
+
+// mixins for active and focused states
+
+.active() {
+  outline: none;
+  box-shadow:0 0 1px 2px @fence-shadow-color, 0 0 3px 3px @active-shadow-color;
+}
+
+.focused() {
+  outline: none;
+  box-shadow:0 0 1px 2px @fence-shadow-color, 0 0 3px 3px @focus-shadow-color;
+}
