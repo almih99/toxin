@@ -1,8 +1,8 @@
 $(document).ready(
 
 function registerAllSliders(e) {
+    const nf = new Intl.NumberFormat('ru-RU');
     function formatPriceRange(min, max) {
-        nf = new Intl.NumberFormat('ru-RU');
         return nf.format(min) + "₽ - " + nf.format(max) + "₽";
     }
     $(".slider").each(
@@ -22,7 +22,11 @@ function registerAllSliders(e) {
                         $(this)
                             .parent()
                             .find(".slider__label")
-                            .text(formatPriceRange(ui.values[0],ui.values[1]));   
+                            .text(formatPriceRange(ui.values[0],ui.values[1]));
+                        $(this)
+                            .closest(".slider")
+                            .attr("data-val1", ui.values[0])
+                            .attr("data-val2", ui.values[1]);
                     }
                 }
             );
