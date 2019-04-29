@@ -1,0 +1,7 @@
+-
+  const Id = {
+      prefix: "autoid",
+      current: 0,
+      id() {return this.prefix + "-" + this.current},
+      nextId() {return this.prefix + "-" + ++this.current}
+  }

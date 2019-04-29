@@ -79,7 +79,7 @@ module.exports = (env, argv) => (
       // load css files
       {
         test: /\.css$/,
-        loaders: ["style-loader","css-loader"]
+        loaders: ["style-loader", "css-loader"]
       },
       // make translating for js files
       {

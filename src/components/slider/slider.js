@@ -20,7 +20,7 @@ function registerAllSliders(e) {
                     values: [val1, val2],
                     slide : function(event, ui) {
                         $(this)
-                            .parent()
+                            .closest(".slider")
                             .find(".slider__label")
                             .text(formatPriceRange(ui.values[0],ui.values[1]));
                         $(this)
@@ -36,17 +36,7 @@ function registerAllSliders(e) {
     )
 }
 
-);
+); // $(document).ready
 
-    /*
-    $(".ui-slider").slider({
-        animate: "slow",
-        range: true,    
-        values: [ 10, 65 ],
-        slide : function(event, ui) {
-            $(this).parent().find(".slider__label").text(ui.values[0] + "₽ - " + ui.values[1] +"₽");      
-        }
-    });
-    */ 
 
 module.exports=null;

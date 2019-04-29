@@ -1,6 +1,16 @@
 doctype html
+include components/common.pug
 include components/button/button.pug
 include components/slider/slider.pug
+include components/checkbox/checkbox.pug
+include components/radiobutton/radiobutton.pug
+include components/toggle/toggle.pug
+include components/like-button/like-button.pug
+
+mixin separator(title)
+  .separator 
+    h3= title
+    block
 
 html(lang="ru")
   head
@@ -19,11 +29,23 @@ html(lang="ru")
       .column
         +slider(0, 10000, 500, 8000)
       .column
-        +slider(0, 1000, 0, 800)
+        +separator('Checkbox buttons')
+          +checkbox(name="myCheckbox" disabled) Можно курить
+          +checkbox(name="myCheckbox" checked) Можно c питомцами
+          +checkbox(name="myCheckbox") Можно пригласить гостей <br>(до 10 человек)
+        +separator("Radio Buttons")
+          +radiobutton(name="sex" checked) Мужчина
+          +radiobutton(name="sex") Женщина
+        +separator("Toggle")
+          +toggle(name="myToggle" checked) Получать спецпредложения
+          +toggle(name="myToggle") Получать спецпредложения
+        +separator("like button")
+          +like-button(name="lb") 8
+          +like-button(name="lb" checked) 12
       .column
-        .separator
+        +separator('Range slider')
           +slider(0, 20000, 5000, 10000)
-        .separator
+        +separator("Buttons")
           +button
             +button__label click me
           +button(disabled="true")
@@ -36,8 +58,9 @@ html(lang="ru")
         .separator
           +button(class="button_tiny")
             +button__label(class="button__label_tiny") click me
-          +button(class="button_tiny" disabled=true)
+          +button(class="button_tiny" disabled="disabled")
             +button__label(class="button__label_tiny") click me
         .separator
           +button(class="button_arrowed")
             +button__label(class="button__label_arrowed") перейти к оплате
+        +separator("Pagination")

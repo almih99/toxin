@@ -1,0 +1,74 @@
+.like-button {
+    position: relative;
+    display: inline-block;
+
+    &__input {
+        position: absolute;
+        right: 10px; 
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        margin:-1px;
+        border: none;
+        outline: none;
+        clip: rect(1px, 1px, 1px, 1px); 
+    }
+
+    &__background-label {
+        background: @dark-25;
+        padding: 1px;
+        border-radius: 18px;
+    }
+
+    &__input:checked + &__background-label {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+
+    &__label {
+        display: block;
+        color: @dark-25;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        background: @white;
+        border-radius: 9px;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    &__input:checked + &__background-label &__label {
+        color: @purple;
+    }
+
+    &__label::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: url(favorite_border.svg);
+        background-repeat: no-repeat;
+        left: 5px;
+        top: 6px;
+    }
+
+    &__input:checked + &__background-label &__label::before {
+        background: url(favorite.svg);
+        background-repeat: no-repeat;
+    }
+
+    &__input:focus + &__background-label {
+        .focused();
+    }
+
+    &__input:active + &__background-label {
+        .active();
+    }
+
+
+  }
