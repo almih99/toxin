@@ -1,0 +1,66 @@
+.rate-button {
+    display: inline-block;
+   position: relative; 
+   width: 24px * 5;
+   height: 24px;
+   background-image: url(star_border.svg);
+   background-repeat: repeat-x;
+
+   &__input {
+    .input_hidden();
+   }
+
+   &__label {
+       position: absolute;
+       display: block;
+       height: 24px;
+       top: 0;
+       left:0;
+       border-radius: 6px;
+       background-repeat: repeat-x;
+   }
+
+   &__label:nth-of-type(1) {
+       width: 24px;
+       z-index: 5;
+   }
+
+   &__label:nth-of-type(2) {
+        width: 24px*2;
+        z-index: 4;
+   }
+
+   &__label:nth-of-type(3) {
+    width: 24px*3;
+    z-index: 3;
+   }
+
+   &__label:nth-of-type(4) {
+     width: 24px*4;
+     z-index: 2;
+   }
+
+   &__label:nth-of-type(5) {
+    width: 24px*5;
+    z-index: 1;
+   }
+
+   &__input:checked + &__label {
+       background-image: url(star.svg);
+   }
+
+   &__input + &__label:hover {
+      background-color: rgba(187, 156, 255, 0.15);
+   }
+
+   &__input:focus + &__label::after{
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background-color: rgba(187, 156, 255, 0.6);
+        right: 0;
+        bottom: -2px;
+   }
+
+}

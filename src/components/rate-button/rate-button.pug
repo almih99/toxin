@@ -1,0 +1,12 @@
+
+mixin rate-button(value=3)
+  .rate-button
+    - var count=0;
+    while count<5
+      input.rate-button__input(
+          type="radio" 
+          value=++count 
+          id=Id.nextId() 
+          checked=(count==value)
+      )&attributes(attributes)
+      label.rate-button__label(for=Id.id())

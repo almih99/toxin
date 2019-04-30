@@ -6,6 +6,8 @@ include components/checkbox/checkbox.pug
 include components/radiobutton/radiobutton.pug
 include components/toggle/toggle.pug
 include components/like-button/like-button.pug
+include components/rate-button/rate-button.pug
+include components/pagination/pagination.pug
 
 mixin separator(title)
   .separator 
@@ -42,6 +44,10 @@ html(lang="ru")
         +separator("like button")
           +like-button(name="lb") 8
           +like-button(name="lb" checked) 12
+        +separator("Rate button")
+          +rate-button(3)(name="rb1")
+          <!-- --> &nbsp;&nbsp;&nbsp;
+          +rate-button(4)(name="rb2")
       .column
         +separator('Range slider')
           +slider(0, 20000, 5000, 10000)
@@ -64,3 +70,11 @@ html(lang="ru")
           +button(class="button_arrowed")
             +button__label(class="button__label_arrowed") перейти к оплате
         +separator("Pagination")
+          +pagination("1-12 из 100+ вариантов аренды")
+            +pagination__button(class="pagination__button_prev" href="#")
+            +pagination__button(class="pagination__button_cur" href="#") 1
+            +pagination__button(href="#") 2
+            +pagination__button(href="#") 3
+            +pagination__button(class="pagination__button_gap")
+            +pagination__button(href="#") 15
+            +pagination__button(class="pagination__button_next" href="#")

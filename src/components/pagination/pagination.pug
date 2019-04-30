@@ -1,0 +1,13 @@
+
+mixin pagination__button
+  li.pagination__button
+    a.pagination__link&attributes(attributes)
+      block
+
+
+mixin pagination(text)
+  ul.pagination&attributes(attributes)
+    block
+    li.pagination__text= text
+    
+    
