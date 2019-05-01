@@ -8,6 +8,8 @@ include components/toggle/toggle.pug
 include components/like-button/like-button.pug
 include components/rate-button/rate-button.pug
 include components/pagination/pagination.pug
+include components/text-field/text-field.pug
+include components/date-text-field/date-text-field.pug
 
 mixin separator(title)
   .separator 
@@ -29,7 +31,10 @@ html(lang="ru")
     h1 Страница тестирования и отладки элементов интерфейса
     .column-holder
       .column
-        +slider(0, 10000, 500, 8000)
+        +separator("Text field")
+          +text-field(placeholder="Email")
+        +separator("Masked text field")
+          +date-text-field
       .column
         +separator('Checkbox buttons')
           +checkbox(name="myCheckbox" disabled) Можно курить

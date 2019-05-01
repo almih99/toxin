@@ -24,4 +24,5 @@ components js import
 */
 
 require("./components/slider/slider.js");
+require("./components/date-text-field/date-text-field.js");
 
