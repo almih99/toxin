@@ -1,0 +1,6 @@
+mixin expandable-control-list(initialValue)
+  .dropdown.expandable-control-list
+    input.dropdown__show(type="checkbox" id=Id.nextId())
+    label.dropdown__label.expandable-control-list__label(for=Id.id())= initialValue
+    .dropdown__content.expandable-control-list__content
+      block

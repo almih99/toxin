@@ -1,0 +1,9 @@
+mixin spin(name, value=0)
+  .spin
+    .spin__lable
+      block
+    .spin__controls
+      button.spin__button.spin__button_minus &minus;
+      input.spin__counter(type="text" name=name value=value)
+      button.spin__button.spin__button_plus +
+

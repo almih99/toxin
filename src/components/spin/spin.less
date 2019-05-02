@@ -1,0 +1,45 @@
+
+.spin {
+    &__button {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: solid 1px @dark-50;
+        background-color: @white;
+        &:disabled {
+            border-color: @dark-25;
+            color: @dark-25;
+        }
+        &:focus {
+            .focused;
+        }
+        &:active {
+            .active()
+        }
+    }
+    &__counter {
+        display: inline-block;
+        width: 25px;
+        padding: 5px 0;
+        border: none;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    &__controls {
+        float: right;
+    }
+
+    &__lable {
+        display: inline-block;
+        font-family:  'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+}

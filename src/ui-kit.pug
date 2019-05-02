@@ -10,6 +10,9 @@ include components/rate-button/rate-button.pug
 include components/pagination/pagination.pug
 include components/text-field/text-field.pug
 include components/date-text-field/date-text-field.pug
+include components/dropdown/dropdown.pug
+include components/expandable-control-list/expandable-control-list.pug
+include components/spin/spin.pug
 
 mixin separator(title)
   .separator 
@@ -35,6 +38,20 @@ html(lang="ru")
           +text-field(placeholder="Email")
         +separator("Masked text field")
           +date-text-field
+        +separator("Dropdown")
+          +dropdown("initial content")
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cupiditate ipsum obcaecati repellendus accusantium praesentium natus nihil excepturi quia.
+        +separator("Expandable checkbox list")
+          +expandable-control-list("EXPANDABLE CHECKBOX LIST")
+            +checkbox(name="breakfest") Завтрак
+            +checkbox(name="breakfest") Письменный стол
+            +checkbox(name="breakfest") Стул для кормления
+            +checkbox(name="breakfest") Кроватка
+            +checkbox(name="breakfest") Телевизор
+            +checkbox(name="breakfest") Шампунь
+            +checkbox(name="breakfest") Носки
+        +separator("Spins")
+            +spin(pm, 1) Спальни
       .column
         +separator('Checkbox buttons')
           +checkbox(name="myCheckbox" disabled) Можно курить
