@@ -12,7 +12,6 @@ $(document).ready(
                             .prop("disabled", true);
                     }
                 }
-                
             );
         // minus button handler
         $(".spin__button_minus").click(

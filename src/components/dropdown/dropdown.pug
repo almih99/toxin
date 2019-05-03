@@ -1,5 +1,5 @@
 mixin dropdown(initialValue)
-  .dropdown
+  .dropdown&attributes(attributes)
     input.dropdown__show(type="checkbox" id=Id.nextId())
     label.dropdown__label(for=Id.id())= initialValue
     .dropdown__content

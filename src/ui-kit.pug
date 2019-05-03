@@ -13,6 +13,7 @@ include components/date-text-field/date-text-field.pug
 include components/dropdown/dropdown.pug
 include components/expandable-control-list/expandable-control-list.pug
 include components/spin/spin.pug
+include components/rooms-demand/rooms-demand.pug
 
 mixin separator(title)
   .separator 
@@ -41,15 +42,6 @@ html(lang="ru")
         +separator("Dropdown")
           +dropdown("initial content")
             p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cupiditate ipsum obcaecati repellendus accusantium praesentium natus nihil excepturi quia.
-        +separator("Expandable checkbox list")
-          +expandable-control-list("EXPANDABLE CHECKBOX LIST")
-            +checkbox(name="breakfest") Завтрак
-            +checkbox(name="breakfest") Письменный стол
-            +checkbox(name="breakfest") Стул для кормления
-            +checkbox(name="breakfest") Кроватка
-            +checkbox(name="breakfest") Телевизор
-            +checkbox(name="breakfest") Шампунь
-            +checkbox(name="breakfest") Носки
         +separator("Spins")
             +spin(pm, 1) Спальни
       .column
@@ -100,3 +92,18 @@ html(lang="ru")
             +pagination__button(class="pagination__button_gap")
             +pagination__button(href="#") 15
             +pagination__button(class="pagination__button_next" href="#")
+    .column-holder
+      .column
+        +separator("Expandable checkbox list")
+          +expandable-control-list("EXPANDABLE CHECKBOX LIST")
+            +checkbox(name="breakfest") Завтрак
+            +checkbox(name="breakfest") Письменный стол
+            +checkbox(name="breakfest") Стул для кормления
+            +checkbox(name="breakfest") Кроватка
+            +checkbox(name="breakfest") Телевизор
+            +checkbox(name="breakfest") Шампунь
+            +checkbox(name="breakfest") Носки
+      .column
+        +separator("Dropdown")
+          +rooms-demand
+      .column

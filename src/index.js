@@ -26,3 +26,4 @@ components js import
 require("./components/slider/slider.js");
 require("./components/date-text-field/date-text-field.js");
 require("./components/spin/spin.js");
+require("./components/rooms-demand/rooms-demand.js");
