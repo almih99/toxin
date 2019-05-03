@@ -14,6 +14,7 @@ include components/dropdown/dropdown.pug
 include components/expandable-control-list/expandable-control-list.pug
 include components/spin/spin.pug
 include components/rooms-demand/rooms-demand.pug
+include components/guest-counter/guest-counter.pug
 
 mixin separator(title)
   .separator 
@@ -106,4 +107,10 @@ html(lang="ru")
       .column
         +separator("Dropdown")
           +rooms-demand
+        +separator("Dropdown")
+          +guest-counter
+      .column
+    .column-holder
+      .column
+        +separator("placeholder")
       .column

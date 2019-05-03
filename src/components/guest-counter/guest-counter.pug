@@ -1,0 +1,13 @@
+mixin guest-counter
+  .dropdown.guest-counter&attributes(attributes)
+    input.dropdown__show(type="checkbox" id=Id.nextId())
+    label.dropdown__label.guest-counter__label(for=Id.id())= "Сколько гостей"
+    .dropdown__content
+      +spin("adults", 0)(class="guest-counter__spin") Взрослые
+      +spin("children", 0)(class="guest-counter__spin") Дети
+      +spin("babyes", 0)(class="guest-counter__spin") Младенцы
+      .guest-counter__buttons-panel.clearfix
+        +button(class="button_tiny guest-counter__clear-button")
+          +button__label(class="button__label_tiny") Очистить
+        +button(class="button_tiny guest-counter__apply-button")
+          +button__label(class="button__label_tiny") Применить

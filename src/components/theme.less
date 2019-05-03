@@ -42,3 +42,9 @@
   outline: none;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
