@@ -15,6 +15,7 @@ include components/expandable-control-list/expandable-control-list.pug
 include components/spin/spin.pug
 include components/rooms-demand/rooms-demand.pug
 include components/guest-counter/guest-counter.pug
+include components/calendar/calendar.pug
 
 mixin separator(title)
   .separator 
@@ -110,7 +111,10 @@ html(lang="ru")
         +separator("Dropdown")
           +guest-counter
       .column
+        +separator("Calendar")
+          +calendar(data-range="true")
     .column-holder
       .column
         +separator("placeholder")
       .column
+

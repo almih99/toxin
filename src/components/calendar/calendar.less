@@ -1,0 +1,122 @@
+@import "../../../node_modules/air-datepicker/dist/css/datepicker.min.css";
+
+.calendar {
+    box-sizing: border-box;
+    width: 320px;
+    padding: 14px;
+    background: @white;
+    border: 1px solid @dark-25;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    .datepicker {
+        border: none;
+        width: 100%;
+
+        &--nav {
+            border: none;
+
+            &-title {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 19px;
+                font-weight: bold;
+                color: @dark-100;
+                i {
+                    all: inherit;
+                }
+            }
+
+            &-action {
+                background-repeat: no-repeat;
+                background-position: center;
+
+                svg {
+                    display: none;
+                }
+
+                &[data-action="prev"] {
+                    background-image: url(calendar_arrow_back.svg);
+                }
+        
+                &[data-action="next"] {
+                    background-image: url(calendar_arrow_forward.svg);
+                }
+            }
+        }
+
+        &--day-name {
+            padding-top: 22px;
+            padding-bottom: 8px;
+            color: @purple;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: none;
+        }
+
+        &--cell-day {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: @dark-50;
+        }
+
+        &--cell-day.-other-month- {
+            color: @dark-25;
+        }
+
+        &--cell-day.-selected- {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            font-weight: bold;
+            color: @white;
+        }
+
+        &--cell-day.-in-range- {
+            background: linear-gradient(180deg, #ece5ff 0%, #e2e7fd 100%);
+            border-radius: 0;
+        }
+
+        &--cell-day.-current- {
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            font-weight: bold;
+            color: @white;
+        }
+
+        &--cell-day.-current-.-in-range- {
+            background: url(calendar-arownd-selection.svg) left no-repeat, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        }
+
+        &--cell-day.-range-from-{
+            background: url(calendar-start-selection.svg) right no-repeat, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border: none;
+            border-radius: 50% 0 0 50%;
+            font-weight: bold;
+            color: @white;
+        }
+
+        &--cell-day.-range-to- {
+            background: url(calendar-end-selection.svg) left no-repeat, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border: none;
+            border-radius: 0 50% 50% 0;
+            font-weight: bold;
+            color: @white;
+        }
+
+        &--cell-day.-focus- {
+            border: none;
+        }
+    }
+
+    &__button-box {
+        padding: 14px 0 4px 0;
+    }
+
+    &__clear-button {
+        float: left;
+    }
+    &__apply-button {
+        float: right;
+    }
+
+
+
+}

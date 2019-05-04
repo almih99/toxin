@@ -28,3 +28,4 @@ require("./components/date-text-field/date-text-field.js");
 require("./components/spin/spin.js");
 require("./components/rooms-demand/rooms-demand.js");
 require("./components/guest-counter/guest-counter.js");
+require("./components/calendar/calendar.js");

@@ -1,0 +1,8 @@
+mixin calendar
+  .calendar
+    .calendar__pane.datepicker-here&attributes(attributes)
+    .calendar__button-box.clearfix
+      +button(class="button_tiny calendar__clear-button")
+        +button__label(class="button__label_tiny") Очистить
+      +button(class="button_tiny calendar__apply-button")
+        +button__label(class="button__label_tiny") Применить
