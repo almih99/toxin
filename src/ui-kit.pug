@@ -18,6 +18,7 @@ include components/guest-counter/guest-counter.pug
 include components/calendar/calendar.pug
 include components/date-dropdown/date-dropdown.pug
 include components/double-date-dropdown/double-date-dropdown.pug
+include components/date-range-dropdown/date-range-dropdown.pug
 
 mixin separator(title)
   .separator 
@@ -50,8 +51,8 @@ html(lang="ru")
           +date-dropdown
         +separator("Double date dropdown")
           +double-date-dropdown
-        +separator("Spins")
-            +spin(pm, 1) Спальни
+        +separator("Date range dropdown")
+          +date-range-dropdown
       .column
         +separator('Checkbox buttons')
           +checkbox(name="myCheckbox" disabled) Можно курить
@@ -112,6 +113,8 @@ html(lang="ru")
             +checkbox(name="breakfest") Шампунь
             +checkbox(name="breakfest") Носки
       .column
+        +separator("Spins")
+            +spin(pm, 1) Спальни
         +separator("Dropdown")
           +rooms-demand
         +separator("Dropdown")
