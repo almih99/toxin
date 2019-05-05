@@ -25,6 +25,7 @@
         height: 18px;
         border: solid 1px @purple;
         border-radius: 4px;
+        cursor: pointer;
     }
 
     &__input:checked + &__label > &__presentation {
@@ -33,8 +34,13 @@
         background-position: center;
     }
 
+    &__input:disabled + &__label {
+        cursor: auto;
+    }
+
     &__input:disabled + &__label > &__presentation {
         border-color: @dark-25;
+        cursor: auto;
     }
 
     &__input:focus + &__label > &__presentation {
@@ -52,6 +58,8 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 18px;
+        cursor: pointer;
+        user-select: none;
     }
 
 }
