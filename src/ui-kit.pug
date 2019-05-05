@@ -17,6 +17,7 @@ include components/rooms-demand/rooms-demand.pug
 include components/guest-counter/guest-counter.pug
 include components/calendar/calendar.pug
 include components/date-dropdown/date-dropdown.pug
+include components/double-date-dropdown/double-date-dropdown.pug
 
 mixin separator(title)
   .separator 
@@ -47,6 +48,8 @@ html(lang="ru")
             p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cupiditate ipsum obcaecati repellendus accusantium praesentium natus nihil excepturi quia.
         +separator("Date dropdown")
           +date-dropdown
+        +separator("Double date dropdown")
+          +double-date-dropdown
         +separator("Spins")
             +spin(pm, 1) Спальни
       .column
