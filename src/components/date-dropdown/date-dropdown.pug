@@ -1,0 +1,6 @@
+mixin date-dropdown
+  .dropdown.date-dropdown&attributes(attributes)
+    input.dropdown__show.date-dropdown__trigger(type="checkbox" id=Id.nextId())
+    label.dropdown__label.date-dropdown__label(for=Id.id()) ДД.ММ.ГГГГ
+    .dropdown__content.date-dropdown__content
+      +calendar
