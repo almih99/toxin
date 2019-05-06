@@ -1,0 +1,5 @@
+mixin rich-checkbox(name, title)
+  .rich-checkbox
+    +checkbox(name=name class="rich-checkbox__checkbox")&attributes(attributes)
+      .rich-checkbox__title= title
+      block
