@@ -21,6 +21,7 @@ include components/double-date-dropdown/double-date-dropdown.pug
 include components/date-range-dropdown/date-range-dropdown.pug
 include components/subscription-text-field/subscription-text-field.pug
 include components/feature-description/feature-description.pug
+include components/rich-checkbox/rich-checkbox.pug
 
 mixin separator(title)
   .separator 
@@ -133,5 +134,12 @@ html(lang="ru")
           +feature-description("img/icons/location_city.svg", "Удобство", "Окно в каждой из спален")
       .column
         +separator("Rich checbox Buttons")
+          +rich-checkbox("Wide", "Широкий коридор") Ширина коридора в номере не менее 91 см.
+          +rich-checkbox("Accessebility", "Помощник для инвалидов") На 1 этаже вас встретит специалист и проводит до номера.
       .column
         +separator("Bullet list")
+        ul.bullet-list
+          li.bullet-list__item Нельзя с питомцами
+          li.bullet-list__item Без вечеринок и мероприятий
+          li.bullet-list__item Время прибытия &mdash после 13:00, а выезд до 12:00
+
