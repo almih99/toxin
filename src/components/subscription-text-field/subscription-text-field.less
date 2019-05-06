@@ -1,0 +1,34 @@
+@import "../text-field/text-field.less";
+
+.subscription-text-field {
+    display: inline-block;
+    position: relative;
+
+    &__text {
+        box-sizing: border-box;
+        width: 260px;
+        padding-right: 50px;  
+    }
+
+
+    &__button {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        right: 8px;
+        top: 50%;
+        margin-top: -15px;
+        background: url(subscription-text-field_arrow_forward.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        &:focus {
+            .focused();
+        }
+        &:active {
+            .active();
+        }
+    }
+}

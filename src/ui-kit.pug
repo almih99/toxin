@@ -19,6 +19,8 @@ include components/calendar/calendar.pug
 include components/date-dropdown/date-dropdown.pug
 include components/double-date-dropdown/double-date-dropdown.pug
 include components/date-range-dropdown/date-range-dropdown.pug
+include components/subscription-text-field/subscription-text-field.pug
+include components/feature-description/feature-description.pug
 
 mixin separator(title)
   .separator 
@@ -37,11 +39,13 @@ html(lang="ru")
       .separator {margin-top: 30px}
     link(href="index.less" rel="stylesheet" type="text/css")
   body
-    h1 Страница тестирования и отладки элементов интерфейса
+    h1 Страница тестирования и отладки элементов интерфейса 
     .column-holder
       .column
         +separator("Text field")
           +text-field(placeholder="Email")
+        +separator("Subscription text field")
+          +subscription-text-field
         +separator("Masked text field")
           +date-text-field
         +separator("Dropdown")
@@ -124,6 +128,10 @@ html(lang="ru")
           +calendar(data-range="true")
     .column-holder
       .column
-        +separator("placeholder")
+        +separator("Feature description")
+          +feature-description("img/icons/emoticon.svg", "Комфорт", "Шумопоглощающие стены")
+          +feature-description("img/icons/location_city.svg", "Удобство", "Окно в каждой из спален")
       .column
-
+        +separator("Rich checbox Buttons")
+      .column
+        +separator("Bullet list")

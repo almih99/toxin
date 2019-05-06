@@ -1,5 +1,6 @@
 .button {
   display: inline-block;
+  box-sizing: border-box;
   border: none;
   border-radius: 22px;
   padding: 2px;
@@ -50,11 +51,12 @@
   // for label with arrow
   &__label_arrowed {
     position: relative;
-    padding-left: 80px;
-    padding-right: 80px;
+    box-sizing: border-box;
+    width: 320px;
+   
     &::after {
       position: absolute;
-      content: url(arrow.svg);
+      content: url(button_arrow.svg);
       top: 8px;
       right: 10px;
     }
