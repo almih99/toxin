@@ -24,8 +24,9 @@
     display: inline-block;
     white-space: nowrap;
     color: white;
-    padding: 10px 15px;
+    padding: 0px 15px;
     font-family: 'Montserrat', sans-serif;
+    line-height: 40px;
     font-size: 12px;
     font-weight: bold; 
     text-transform: uppercase;
@@ -41,25 +42,23 @@
   // for link-like buttons
   &_tiny {
     background: none;
+    line-height: 18px;
   }
 
   &__label_tiny {
     color: @purple;
     padding: 0px 5px;
+    line-height: 18px;
   }
 
   // for label with arrow
   &__label_arrowed {
     position: relative;
     box-sizing: border-box;
-    width: 320px;
-   
-    &::after {
-      position: absolute;
-      content: url(button_arrow.svg);
-      top: 8px;
-      right: 10px;
-    }
+    width: 316px;
+    background-image: url(button_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
   }
 
 

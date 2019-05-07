@@ -98,7 +98,16 @@ module.exports = (env, argv) => (
       },
       // copy files
       {
-        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.wav$|\.mp3$/,
+        test: /fonts\/.+\.(eot|otf|svg|ttf|woff)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]'
+          }
+        }
+      },
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|(?<!fonts\/.+)\.svg$|\.wav$|\.mp3$/,
         use: [
           {
             loader: 'file-loader',
@@ -107,15 +116,6 @@ module.exports = (env, argv) => (
             }
           }
         ] 
-      },
-      {
-        test: /\.ttf$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[ext]'
-          }
-        }
       }
     ]
   },

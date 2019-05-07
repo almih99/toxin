@@ -1,5 +1,6 @@
 doctype html
 include components/common.pug
+
 include components/button/button.pug
 include components/slider/slider.pug
 include components/checkbox/checkbox.pug
@@ -24,6 +25,8 @@ include components/feature-description/feature-description.pug
 include components/rich-checkbox/rich-checkbox.pug
 include components/feedback/feedback.pug
 
+include components/primary-search/primary-search.pug
+
 mixin separator(title)
   .separator 
     h2.h2= title
@@ -39,6 +42,7 @@ html(lang="ru")
       .column-holder {display: flex; width:100%; justify-content: space-between;}
       .column {padding: 10px; width: 30%;}
       .separator {margin-top: 30px}
+    link-off(href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Quicksand:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet")
     link(href="index.less" rel="stylesheet" type="text/css")
   body
     h1.h1 Страница тестирования и отладки элементов интерфейса 
@@ -152,5 +156,6 @@ html(lang="ru")
 
     .column-holder
       .column
+        +primary-search
       .column
-      .column
+      .column 
