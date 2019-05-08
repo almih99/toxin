@@ -24,6 +24,7 @@ include components/subscription-text-field/subscription-text-field.pug
 include components/feature-description/feature-description.pug
 include components/rich-checkbox/rich-checkbox.pug
 include components/feedback/feedback.pug
+include components/account-registration/account-registration.pug
 
 include components/primary-search/primary-search.pug
 
@@ -156,6 +157,12 @@ html(lang="ru")
 
     .column-holder
       .column
-        +primary-search
+        +separator("Primary search")
+          +primary-search
+        +separator("Account registration")
+          +account-registration
       .column
+        +separator("Room booking")
+        +separator("Account enter")
       .column 
+        +separator("Room card")
