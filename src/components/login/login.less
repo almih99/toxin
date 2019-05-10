@@ -1,0 +1,55 @@
+@import "../h2/h2.less";
+@import "../h3/h3.less";
+@import "../text-field/text-field.less";
+@import "../radiobutton/radiobutton.less";
+@import "../date-text-field/date-text-field.less";
+@import "../toggle/toggle.less";
+@import "../button/button.less";
+
+.login {
+    box-sizing: border-box;
+    width: 380px;
+    background: @white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 30px;
+    padding-top: 40px;
+
+    &__heading {
+        margin-bottom: 18px;
+    }
+
+    &__email-field {
+        margin-bottom: 8px;
+    }
+
+    &__password-field {
+        margin-bottom: 6px;
+    }
+
+    &__enter {
+        margin-top: 14px;
+        margin-bottom: 29px;
+    }
+
+    &__to-create-account{
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    &__to-create-account-text {
+        line-height: 42px;
+        color: black;
+    }
+
+    &__create-account-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__create-account-button-label {
+    }
+
+}

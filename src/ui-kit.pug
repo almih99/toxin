@@ -24,9 +24,11 @@ include components/subscription-text-field/subscription-text-field.pug
 include components/feature-description/feature-description.pug
 include components/rich-checkbox/rich-checkbox.pug
 include components/feedback/feedback.pug
-include components/account-registration/account-registration.pug
 
 include components/primary-search/primary-search.pug
+include components/account-registration/account-registration.pug
+include components/room-booking/room-booking.pug
+include components/login/login.pug
 
 mixin separator(title)
   .separator 
@@ -163,6 +165,8 @@ html(lang="ru")
           +account-registration
       .column
         +separator("Room booking")
+          +room-booking(888, "люкс", "9 990", "20.08.2019", "24.08.2019", 3, 0, 300)
         +separator("Account enter")
+          +login
       .column 
         +separator("Room card")

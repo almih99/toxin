@@ -1,0 +1,16 @@
+
+include ../text-field/text-field.pug
+include ../button/button.pug
+
+mixin login
+  .login
+    form
+      .h1.login__heading Войти
+      input(type="text" name="email" placeholder="Email").text-field.login__email-field
+      input(type="password" name="password" placeholder="Пароль").text-field.login__password-field
+      +button(class="button_arrowed login__enter")
+        +button__label(class="button__label_arrowed") Войти
+      .login__to-create-account
+        .login__to-create-account-text.text Нет аккаунта на Toxin?
+        +button(class="login__create-account-button")
+          +button__label(class="button__label_white login__create-account-button-label") Создать
