@@ -1,0 +1,48 @@
+include ../double-date-dropdown/double-date-dropdown.pug
+include ../guest-counter/guest-counter.pug
+include ../button/button.pug
+
+mixin room-booking (num, rank, price, dateIn, dateOut, amount, provize, extraprovize)
+  .room-booking
+    form
+      .room-booking__header-row.clearfix
+        span.room-booking__header-row-left-side
+          span.room-booking__number-sign №
+          span.room-booking__room-no= " " + num + " "
+          span.room-booking__room-rank= rank
+        span.room-booking__header-row-right-side
+          span.room-booking__price-rubles= price + "₽ "
+          span.room-booking__price-period в сутки
+      .h3.room-booking__in-label Прибытие
+      .h3.room-booking__out-label Выезд
+      +double-date-dropdown
+      .h3.room-booking__guest-label Гости
+      +guest-counter
+      .room-booking__info-block
+        .room-booking__info-row
+          .room-booking__col-1
+            span.room-booking__cost-calculation 9 900₽ &times; 4 суток
+          .room-booking__col-2
+          .room-booking__col-3
+            span.room-booking__cost-calculated 39960₽
+        .room-booking__info-row
+          .room-booking__col-1
+            span.room-booking__cost-provize Сбор за услуги: скидка 2&nbsp;179₽
+          .room-booking__col-2
+            a.room-booking__info-button(href="#")
+          .room-booking__col-3
+            span.room-booking__cost-calculated 0₽
+        .room-booking__info-row
+          .room-booking__col-1
+            span.room-booking__cost-calculation Сбор за дополнительные услуги
+          .room-booking__col-2
+            a.room-booking__info-button(href="#")
+          .room-booking__col-3
+            span.room-booking__cost-calculated 300₽
+      .room-booking__total-row
+        .room-booking__total-row-title Итого
+        .room-booking__total-row-line
+        .room-booking__total-row-total 38 081₽
+        
+      +button(class="button_arrowed room-booking__button")
+        +button__label(class="button__label_arrowed") Забронировать
