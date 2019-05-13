@@ -20,9 +20,7 @@ mixin account-registration
       input(type="text" name="email" placeholder="Email").text-field.account-registration__email-field
       input(type="password" name="password" placeholder="Пароль").text-field.account-registration__password-field
       +toggle(name="recievoffers") Получать спецпредложения
-      +button(class="button_arrowed account-registration__go-to-pay-button")
-        +button__label(class="button__label_arrowed") Перейти к оплате
+      +button({class: "button_arrowed account-registration__go-to-pay-button"}, {class: "button__label_arrowed"}) Перейти к оплате
       .account-registration__to-login
         .account-registration__to-login-text.text Уже есть аккаунт на Toxin
-        +button(class="account-registration__enter-button")
-          +button__label(class="button__label_white account-registration__enter-button-label") Войти
+        +button({class: "account-registration__enter-button"}, {class: "button__label_white account-registration__enter-button-label"}) Войти

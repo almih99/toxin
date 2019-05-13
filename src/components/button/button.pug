@@ -1,8 +1,8 @@
 
-mixin button()
-  button.button&attributes(attributes)
+mixin button(btnAttr, lblAttr)
+  -
+    var battr = Object.assign({type: button}, btnAttr);
+    var lattr = Object.assign({}, lblAttr)
+  button.button&attributes(battr)
+    span.button__label&attributes(lattr)
       block
-
-mixin button__label()
-  span.button__label&attributes(attributes)
-    block

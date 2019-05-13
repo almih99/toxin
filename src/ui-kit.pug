@@ -88,23 +88,16 @@ html(lang="ru")
         +separator('Range slider')
           +slider(0, 20000, 5000, 10000)
         +separator("Buttons")
-          +button
-            +button__label click me
-          +button(disabled="true")
-            +button__label CLICK ME
+          +button click me
+          +button({disabled: "true"}) CLICK ME
         .separator
-          +button
-            +button__label(class="button__label_white") CLICK ME
-          +button(disabled="disabled")
-            +button__label(class="button__label_white") CLICK ME
+          +button({}, {class: "button__label_white"}) CLICK ME
+          +button({disabled: "disabled"}, {class: "button__label_white"}) CLICK ME
         .separator
-          +button(class="button_tiny")
-            +button__label(class="button__label_tiny") click me
-          +button(class="button_tiny" disabled="disabled")
-            +button__label(class="button__label_tiny") click me
+          +button({class: "button_tiny"}, {class: "button__label_tiny"}) click me
+          +button({class: "button_tiny", disabled: "disabled"}, {class: "button__label_tiny"}) click me
         .separator
-          +button(class="button_arrowed")
-            +button__label(class="button__label_arrowed") перейти к оплате
+          +button({class: "button_arrowed"}, {class: "button__label_arrowed"}) перейти к оплате
         +separator("Pagination")
           +pagination("1-12 из 100+ вариантов аренды")
             +pagination__button(class="pagination__button_prev" href="#")

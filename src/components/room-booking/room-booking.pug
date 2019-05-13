@@ -44,5 +44,4 @@ mixin room-booking (num, rank, price, dateIn, dateOut, amount, provize, extrapro
         .room-booking__total-row-line
         .room-booking__total-row-total 38 081₽
         
-      +button(class="button_arrowed room-booking__button")
-        +button__label(class="button__label_arrowed") Забронировать
+      +button({class: "button_arrowed room-booking__button"}, {class: "button__label_arrowed"}) Забронировать

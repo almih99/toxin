@@ -7,7 +7,5 @@ mixin guest-counter
       +spin("children", 0)(class="guest-counter__spin") Дети
       +spin("babyes", 0)(class="guest-counter__spin") Младенцы
       .guest-counter__buttons-panel.clearfix
-        +button(class="button_tiny guest-counter__clear-button")
-          +button__label(class="button__label_tiny") Очистить
-        +button(class="button_tiny guest-counter__apply-button")
-          +button__label(class="button__label_tiny") Применить
+        +button({class: "button_tiny guest-counter__clear-button"}, {class: "button__label_tiny"}) Очистить
+        +button({class: "button_tiny guest-counter__apply-button"}, {class: "button__label_tiny"}) Применить
