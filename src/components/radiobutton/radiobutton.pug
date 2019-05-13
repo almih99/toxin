@@ -1,7 +1,11 @@
-mixin radiobutton
-  .radiobutton
-    input.radiobutton__input(type="radio" id=Id.nextId())&attributes(attributes)
-    label.radiobutton__label(for=Id.id())
-      .radiobutton__presentation
-        .radiobutton__marker
+mixin radiobutton(name, value, checked, radioAttrs, inputAttrs, labelAttrs, presentationAttrs)
+  .radiobutton&attributes(radioAttrs)
+    input.radiobutton__input(
+      type="radio" 
+      id=Id.nextId()
+      name=name
+      value=value
+      checked=checked)&attributes(inputAttrs)
+    label.radiobutton__label(for=Id.id())&attributes(labelAttrs)
+      .radiobutton__presentation&attributes(presentationAttrs)
       block
