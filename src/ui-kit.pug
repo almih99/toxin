@@ -100,13 +100,13 @@ html(lang="ru")
           +button({class: "button_arrowed"}, {class: "button__label_arrowed"}) перейти к оплате
         +separator("Pagination")
           +pagination("1-12 из 100+ вариантов аренды")
-            +pagination__button(class="pagination__button_prev" href="#")
-            +pagination__button(class="pagination__button_cur" href="#") 1
-            +pagination__button(href="#") 2
-            +pagination__button(href="#") 3
-            +pagination__button(class="pagination__button_gap")
-            +pagination__button(href="#") 15
-            +pagination__button(class="pagination__button_next" href="#")
+            +pagination__button("#", "pagination__button_prev")
+            +pagination__button("#", "pagination__button_cur") 1
+            +pagination__button("#") 2
+            +pagination__button("#") 3
+            +pagination__button("", "pagination__button_gap")
+            +pagination__button("#") 15
+            +pagination__button("#", "pagination__button_next")
     .column-holder
       .column
         +separator("Expandable checkbox list")
