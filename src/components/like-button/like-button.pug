@@ -1,6 +1,9 @@
-mixin like-button
-  .like-button
-    input.like-button__input(type="checkbox" id=Id.nextId())&attributes(attributes)
-    div.like-button__background-label
-      label.like-button__label(for=Id.id())
-        block
+mixin like-button(name, likes=0, checked=false, likeAttrs, inputAttrs, labelAttrs, backgroundAttrs)
+  .like-button&attributes(likeAttrs)
+    input.like-button__input(
+      type="checkbox"
+      id=Id.nextId()
+      name=name
+      checked=checked)&attributes(inputAttrs)
+    div.like-button__background-label&attributes(backgroundAttrs)
+      label.like-button__label(for=Id.id())&attributes(labelAttrs)= likes

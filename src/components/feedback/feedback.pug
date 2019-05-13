@@ -6,6 +6,6 @@ mixin feedback(photo, name, date, likes, isChecked)
       .feedback__date= date
     .feedback__body
       .feedback__like
-        +like-button(name="lb" checked=isChecked)= likes
+        +like-button("lb", likes, isChecked)
       .feedback__text
         block
