@@ -68,9 +68,9 @@ html(lang="ru")
           +date-range-dropdown
       .column
         +separator('Checkbox buttons')
-          +checkbox(name="myCheckbox" disabled) Можно курить
-          +checkbox(name="myCheckbox" checked) Можно c питомцами
-          +checkbox(name="myCheckbox") Можно пригласить гостей <br>(до 10 человек)
+          +checkbox("myCheckbox", false, {}, {disabled: true}) Можно курить
+          +checkbox("myCheckbox", "checked") Можно c питомцами
+          +checkbox("myCheckbox") Можно пригласить гостей <br>(до 10 человек)
         +separator("Radio Buttons")
           +radiobutton(name="sex" checked) Мужчина
           +radiobutton(name="sex") Женщина
@@ -111,13 +111,13 @@ html(lang="ru")
       .column
         +separator("Expandable checkbox list")
           +expandable-control-list("EXPANDABLE CHECKBOX LIST")
-            +checkbox(name="breakfest") Завтрак
-            +checkbox(name="breakfest") Письменный стол
-            +checkbox(name="breakfest") Стул для кормления
-            +checkbox(name="breakfest") Кроватка
-            +checkbox(name="breakfest") Телевизор
-            +checkbox(name="breakfest") Шампунь
-            +checkbox(name="breakfest") Носки
+            +checkbox("require-breakfest") Завтрак
+            +checkbox("require-table") Письменный стол
+            +checkbox("require-baby-table") Стул для кормления
+            +checkbox("require-baby-bed") Кроватка
+            +checkbox("require-tv") Телевизор
+            +checkbox("require-shampoo") Шампунь
+            +checkbox("require-socks") Носки
       .column
         +separator("Spins")
             +spin(pm, 1) Спальни
