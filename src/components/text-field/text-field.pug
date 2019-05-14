@@ -1,3 +1,6 @@
 
-mixin text-field
-  input.text-field(type="text")&attributes(attributes)
+mixin text-field(name, placeholder, textAttrs)
+  input.text-field(
+    name=name
+    type="text"
+    placeholder=placeholder)&attributes(textAttrs)

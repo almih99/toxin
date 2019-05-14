@@ -8,8 +8,14 @@ mixin account-registration
   .account-registration
     form
       .h1.account-registration__heading Регистрация аккаунта
-      input(type="text" name="firstname" placeholder="Имя").text-field.account-registration__first-name
-      input(type="text" name="secondname" placeholder="Фамилия").text-field.account-registration__last-name
+      +text-field(
+        "firstname",
+        "Имя",
+        {class: "account-registration__first-name"})
+      +text-field(
+        "secondname",
+        "Фамилия",
+        {class: "account-registration__last-name"})
       .account-registration__radio-wrapper
         +radiobutton("sex", "male", true) Мужчина
       .account-registration__radio-wrapper
@@ -17,8 +23,15 @@ mixin account-registration
       .h3.account-registration__birthday-label Дата рождения
       +date-text-field(name="birthdayDate" class="account-registration__birthday-field")
       .h3.account-registration__login-data_label Данные для входа в сервис
-      input(type="text" name="email" placeholder="Email").text-field.account-registration__email-field
-      input(type="password" name="password" placeholder="Пароль").text-field.account-registration__password-field
+      +text-field(
+        "email",
+        "Email",
+        {class: "account-registration__email-field", type: "email"})
+      +text-field(
+        "password",
+        "Пароль",
+        {class: "account-registration__password-field", type: "password"}
+      )
       +toggle("recievoffers") Получать спецпредложения
       +button({class: "button_arrowed account-registration__go-to-pay-button"}, {class: "button__label_arrowed"}) Перейти к оплате
       .account-registration__to-login

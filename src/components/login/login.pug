@@ -6,9 +6,19 @@ mixin login
   .login
     form
       .h1.login__heading Войти
-      input(type="text" name="email" placeholder="Email").text-field.login__email-field
-      input(type="password" name="password" placeholder="Пароль").text-field.login__password-field
-      +button({class: "button_arrowed login__enter"}, {class: "button__label_arrowed"}) Войти
+      +text-field(
+        "email", 
+        "Email", 
+        {class: "login__email-field"})
+      +text-field(
+        "password",
+        "Пароль",
+        {class: "login__password-field", type: "password"})
+      +button(
+        {class: "button_arrowed login__enter"},
+        {class: "button__label_arrowed"}) Войти
       .login__to-create-account
         .login__to-create-account-text.text Нет аккаунта на Toxin?
-        +button({class: "login__create-account-button"}, {class: "button__label_white login__create-account-button-label"}) Создать
+        +button(
+          {class: "login__create-account-button"}, 
+          {class: "button__label_white login__create-account-button-label"}) Создать
