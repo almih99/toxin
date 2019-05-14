@@ -1,6 +1,7 @@
-mixin dropdown(initialValue)
+mixin dropdown(text, dropdownAttr, backdropAttr, labelAttr, contentAttr)
   .dropdown&attributes(attributes)
     input.dropdown__show(type="checkbox" id=Id.nextId())
-    label.dropdown__label(for=Id.id())= initialValue
-    .dropdown__content
+    label.dropdown__backdrop(for=Id.id())&attributes(backdropAttr)
+    label.dropdown__label(for=Id.id())&attributes(labelAttr)= text
+    .dropdown__content&attributes(contentAttr)
       block

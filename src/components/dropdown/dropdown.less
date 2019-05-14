@@ -6,6 +6,22 @@
         .input_hidden()
     }
 
+
+    &__backdrop {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(255,0,0,0.3); // debug
+        z-index: 0;
+    }
+
+    &__show:checked ~ &__backdrop {
+        display: block;
+    }
+
     &__label {
         display: block;
         background-color: @white;
@@ -32,14 +48,14 @@
         border-color: @dark-50;
     }
 
-    &__show:checked + &__label {
+    &__show:checked ~ &__label {
         color: @dark-75;
         border-color: @dark-50;
         border-radius: 4px 4px 0 0;
         background-image: url(expand_less.svg);
     }
 
-    &__show:focus + &__label      {
+    &__show:focus ~ &__label      {
         color: @dark-75;
         border-color: @dark-50;
     }
@@ -58,7 +74,7 @@
         z-index: 10;
     }
 
-    &__show:checked + &__label + &__content {
+    &__show:checked ~ &__content {
         display: block;
     }
 }
