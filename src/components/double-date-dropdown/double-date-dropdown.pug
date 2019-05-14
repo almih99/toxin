@@ -1,8 +1,8 @@
 include ../date-dropdown/date-dropdown.pug
 
-mixin double-date-dropdown
-  .double-date-dropdown
+mixin double-date-dropdown(name, val1, val2, dddAttrs)
+  .double-date-dropdown&attributes(dddAttrs)
     .double-date-dropdown__from-field
-      +date-dropdown
+      +date-dropdown(name + "[0]", val1)
     .double-date-dropdown__to-field
-      +date-dropdown
+      +date-dropdown(name + "[1]", val2)
