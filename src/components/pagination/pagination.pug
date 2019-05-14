@@ -1,13 +1,13 @@
 
 mixin pagination__button(href="#", modifer, linkAttrs)
-  - var lattrs=Object.assign({href: href, class: modifer}, linkAttrs)
+  - var lattrs=join({href: href, class: modifer}, linkAttrs)
   li.pagination__button
     a.pagination__link&attributes(lattrs)
       block
 
 
 mixin pagination(text, textAttrs)
-  - var txtattr=Object.assign({}, textAttrs);
+  - var txtattr=join({}, textAttrs);
   ul.pagination&attributes(lstattr)
     block
     li.pagination__text&attributes(txtattr)= text
