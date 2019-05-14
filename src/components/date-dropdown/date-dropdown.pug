@@ -1,6 +1,12 @@
-mixin date-dropdown
-  .dropdown.date-dropdown&attributes(attributes)
-    input.dropdown__show.date-dropdown__trigger(type="checkbox" id=Id.nextId())
-    label.dropdown__label.date-dropdown__label(for=Id.id()) ДД.ММ.ГГГГ
-    .dropdown__content.date-dropdown__content
-      +calendar
+include ../dropdown/dropdown.pug
+include ../calendar/calendar.pug
+
+mixin date-dropdown(name, labelContent="ДД.ММ.ГГГГ", dropdownAttr, calAttr)
+  +dropdown(
+    labelContent,
+    join({class: "date-dropdown"}, dropdownAttr),
+    {class: "date-dropdown__trigger"},
+    {},
+    {class: "date-dropdown__label"},
+    {class: "date-dropdown__content"})
+    +calendar(name, calAttr)
