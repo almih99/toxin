@@ -1,4 +1,10 @@
-mixin subscription-text-field(textAttributes, buttonAttributes)
-  .subscription-text-field
-    input.text-field.subscription-text-field__text(type="text")&attributes(textAttributes)
+include ../text-field/text-field.pug
+
+mixin subscription-text-field(name, placeholder, stfAttributes, textAttributes, buttonAttributes)
+  .subscription-text-field&attributes(stfAttributes)
+    +text-field(
+      name, 
+      placeholder, 
+      Object.assign({class: subscription-text-field__text}, textAttributes))
+    //input.text-field.subscription-text-field__text(type="text")&attributes(textAttributes)
     button.subscription-text-field__button(type="button")&attributes(buttonAttributes)
