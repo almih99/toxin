@@ -9,7 +9,7 @@
 Структура результирующего элемента:
 
     .subscription-text-field
-      +text-field.subscription-text-field__text
+    +text-field.subscription-text-field__text
       button.subscription-text-field__button
 
 ## Использование

@@ -1,6 +1,13 @@
-mixin date-text-field
-  input.text-field.date-text-field(
-      type="text" 
-      spellcheck="false"
-      data-inputmask="'alias': 'datetime', 'inputFormat': 'dd.mm.yyyy', 'placeholder': 'ДД.ММ.ГГГГ'" 
-      placeholder="ДД.ММ.ГГГГ")&attributes(attributes)
+include ../text-field/text-field.pug
+
+- var defaultInputMask="'alias': 'datetime', 'inputFormat': 'dd.mm.yyyy', 'placeholder': 'ДД.ММ.ГГГГ'"
+
+mixin date-text-field(name, placeholder="ДД.ММ.ГГГГ", inputMask=defaultInputMask, textFieldAttributes)
+  +text-field(
+    name,
+    placeholder,
+    join({
+      class: "date-text-field",
+      spellcheck: "false",
+      'data-inputmask': inputMask
+    }, textFieldAttributes))

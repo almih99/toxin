@@ -5,3 +5,20 @@
       id() {return this.prefix + "-" + this.current},
       nextId() {return this.prefix + "-" + ++this.current}
   }
+
+-
+  function join(...objects) {
+    let res={};
+    let classes=[];
+    for(var obj of objects) {
+      console.log(objects);
+      if(obj && obj["class"]) {
+        classes.push(obj["class"]);
+        delete obj["class"];
+      }
+    }
+    if(classes.length) {
+      res["class"]=classes.join(" ");
+    }
+    return Object.assign(res, ...objects);
+  }
