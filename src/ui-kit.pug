@@ -61,9 +61,9 @@ html(lang="ru")
           +dropdown("initial content")
             p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cupiditate ipsum obcaecati repellendus accusantium praesentium natus nihil excepturi quia.
         +separator("Date dropdown")
-          +date-dropdown
+          +date-dropdown("myname")
         +separator("Double date dropdown")
-          +double-date-dropdown
+          +double-date-dropdown("someother")
         +separator("Date range dropdown")
           +date-range-dropdown
       .column
@@ -127,7 +127,7 @@ html(lang="ru")
           +guest-counter
       .column
         +separator("Calendar")
-          +calendar(data-range="true")
+          +calendar("simpleCal", {}, {'data-range': "true"})
     .column-holder
       .column
         +separator("Feature description")

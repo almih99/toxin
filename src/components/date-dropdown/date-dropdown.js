@@ -1,9 +1,10 @@
 
-function onSelect(formattedDate, date, inst){
-    inst.$el
+function onChange(e) {
+    $(this)
         .closest(".date-dropdown")
         .find(".date-dropdown__label")
-        .text(formattedDate ? formattedDate : "ДД.ММ.ГГГГ");
+        .text($(e.target).val() ? $(e.target).val() : "ДД.ММ.ГГГГ");
+
 }
 
 function onApply() {
@@ -27,9 +28,8 @@ $(document).ready (
     function(e) {
         const $base = $(".date-dropdown");
         const $cal = $base.find(".datepicker-here");
-        $cal.datepicker({
-            onSelect: onSelect
-        });
+        $cal.datepicker();
+        $base.find(".calendar__result").change(onChange);
         $base
             .find(".calendar__clear-button")
             .click(onClear)

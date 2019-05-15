@@ -1,6 +1,7 @@
-mixin calendar
-  .calendar
-    .calendar__pane.datepicker-here&attributes(attributes)
+mixin calendar(name, calAttributes, datapeckerAttributes)
+  .calendar&attributes(calAttributes)
+    input.calendar__result(type="hidden" name=name)
+    .calendar__pane.datepicker-here&attributes(datapeckerAttributes)
     .calendar__button-box.clearfix
       +button({class: "button_tiny calendar__clear-button"}, {class: "button__label_tiny calendar__button-label_gray"}) Очистить
       +button({class: "button_tiny calendar__apply-button"}, {class: "button__label_tiny"}) Применить

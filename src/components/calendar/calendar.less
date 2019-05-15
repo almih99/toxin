@@ -10,9 +10,14 @@
     border-radius: 4px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     user-select: none;
+    //background: none;
+
     .datepicker {
         border: none;
         width: 100%;
+        position: relative;
+        z-index: 1;
+        //background: none;
 
         &--nav {
             border: none;
@@ -53,11 +58,14 @@
         }
 
         &--cell-day {
+            position: relative;
             width: 40px;
             height: 40px;
             border-radius: 50%;
             font-family: 'Montserrat', sans-serif;
             color: @dark-50;
+            z-index: auto;
+            background-color: transparent;
         }
 
         &--cell-day.-other-month- {
@@ -82,23 +90,54 @@
         }
 
         &--cell-day.-current-.-in-range- {
-            background: url(calendar-arownd-selection.svg) left no-repeat, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border-radius: 50%;
         }
 
-        &--cell-day.-range-from-{
-            background: url(calendar-start-selection.svg) right no-repeat, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            border: none;
-            border-radius: 50% 0 0 50%;
+        &--cell-day.-current-.-in-range-::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #ece5ff 0%, #e2e7fd 100%);
+            z-index: -1;
+        }
+
+        &--cell-day.-range-from- {
+    
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
             font-weight: bold;
             color: @white;
+        }
+
+        .-range-from-::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(180deg, #ece5ff 0%, #e2e7fd 100%);
+            right: 0;
+            z-index: -1;
         }
 
         &--cell-day.-range-to- {
-            background: url(calendar-end-selection.svg) left no-repeat, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            border: none;
-            border-radius: 0 50% 50% 0;
+    
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
             font-weight: bold;
             color: @white;
+        }
+
+        &--cell-day.-range-to-::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(180deg, #ece5ff 0%, #e2e7fd 100%);
+            left: 0;
+            z-index: -1;
         }
 
         &--cell-day.-focus- {
