@@ -1,18 +1,14 @@
 include ../spin/spin.pug
 include ../dropdown/dropdown.pug
 
-//-
-  mixin rooms-demand
-  +dropdown("2 спальни, 2 кровати")(class="room-demand")
-    +spin("bedrooms", 2)(class="room-demand__spin") Спальни
-    +spin("beds", 2)(class="room-demand__spin") Кровати
-    +spin("bathrooms", 0)(class="room-demand__spin") Ванные комнаты
-
-mixin rooms-demand
-  .dropdown.room-demand&attributes(attributes)
-    input.dropdown__show(type="checkbox" id=Id.nextId())
-    label.dropdown__label.room-demand__label(for=Id.id())= "2 спальни, 2 кровати, 0 ванных комнат"
-    .dropdown__content
-      +spin("bedrooms", 2, {class: "room-demand__spin"}) Спальни
-      +spin("beds", 2, {class: "room-demand__spin"}) Кровати
-      +spin("bathrooms", 0, {class: "room-demand__spin"}) Ванные комнаты
+mixin rooms-demand(text="не задано", val1=0, val2=0, val3=0, roomDemandAttrs)
+  +dropdown(
+    text,
+    join({class: "room-demand"}, roomDemandAttrs),
+    {},
+    {},
+    {class: "room-demand__label"},
+    {})
+      +spin("bedrooms", val1, {class: "room-demand__spin"}) Спальни
+      +spin("beds", val2, {class: "room-demand__spin"}) Кровати
+      +spin("bathrooms", val3, {class: "room-demand__spin"}) Ванные комнаты
