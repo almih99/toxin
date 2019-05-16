@@ -1,11 +1,24 @@
 
 .bullet-list {
-    list-style-image: url(bullet-list__mark.png);
+    list-style: none;
     padding-left: 20px;
     &__item {
+        position: relative;
         font-family: 'Montserrat', sans-serif;
         font-size: 14px;
         line-height: 24px;
         color: @dark-75;
     }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        background-color: @dark-25;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        top: 7px;
+        left: -18px;
+    }
+
 }
