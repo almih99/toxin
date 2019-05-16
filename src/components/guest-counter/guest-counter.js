@@ -1,5 +1,9 @@
 const guestForms = 
   ["гостей", "гость", "гостя", "гостя", "гостя", "гостей"];
+const childrenForms=
+  ["детей", "ребёнок", "ребёнка", "ребёнка", "ребёнка", "детей"];
+const babyesForms =
+  ["младенцев", "младенец", "младенца", "младенца", "младенца", "младенцев"];
 
 function getWordForm(n, wlist) {
     n=Number(n);
@@ -8,10 +12,20 @@ function getWordForm(n, wlist) {
     return wlist[n];
 }
 
+function countAdults(current) {
+  return Number($(current).find("[name='adults']").val());
+}
+
+function countChildern(current) {
+  return Number($(current).find("[name='children']").val());
+}
+
+function countBabyes(current) {
+  return Number($(current).find("[name='babyes']").val());
+}
+
 function countGuests(current){
-  return Number($(current).find("[name='adults']").val()) +
-    Number($(current).find("[name='children']").val()) +
-    Number($(current).find("[name='babyes']").val());
+  return countAdults(current) + countChildern(current) + countBabyes(current);
 }
 
 function onApplyClick(e) {
@@ -19,16 +33,30 @@ function onApplyClick(e) {
 }
 
 function onClearClick(e) {
-    $(this).closest(".guest-counter").find(":text").val("0");
+    $(this).closest(".guest-counter").find(":text").val("0").trigger("change");
 }
 
 function onGuestAmountChanged(e) {
-    const guests = countGuests(this);
+    const adults = countAdults(this)
+    const children = countChildern(this)
+    const babyes = countBabyes(this)
+    var res=[];
 
-    const res = guests ? guests + " " + getWordForm(guests, guestForms) : "Сколько гостей";
-    $(this).find(".guest-counter__label").text(res);
+    if(adults) {
+      res.push(adults + " " + getWordForm(adults, guestForms));
+    }
+    if(children) {
+      res.push(children + " " + getWordForm(children, childrenForms));
+    }
+    if(babyes) {
+      res.push(babyes + " " + getWordForm(babyes, babyesForms));
+    }
+    const resString=res.length ? res.join(", ") : "Сколько гостей";
+
+    $(this).find(".guest-counter__label").text(resString);
+
     const clBtn=$(this).find(".guest-counter__clear-button");
-    if(guests) {
+    if(adults || children || babyes) {
       clBtn.removeClass("guest-counter__clear-button_hidden");
     } else {
       clBtn.addClass("guest-counter__clear-button_hidden");

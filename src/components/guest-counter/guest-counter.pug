@@ -1,8 +1,14 @@
-mixin guest-counter
-  .dropdown.guest-counter&attributes(attributes)
-    input.dropdown__show(type="checkbox" id=Id.nextId())
-    label.dropdown__label.guest-counter__label(for=Id.id())= "Сколько гостей"
-    .dropdown__content
+include ../spin/spin.pug
+include ../dropdown/dropdown.pug
+
+mixin guest-counter(text="Сколько гостей", val1=0, val2=0, val3=0, guestCounterAttrs)
+  +dropdown(
+    text,
+    join({class: "guest-counter"}, guestCounterAttrs),
+    {},
+    {},
+    {class: "guest-counter__label"},
+    {})
       +spin("adults", 0, {class: "guest-counter__spin"}) Взрослые
       +spin("children", 0, {class: "guest-counter__spin"}) Дети
       +spin("babyes", 0, {class: "guest-counter__spin"}) Младенцы
