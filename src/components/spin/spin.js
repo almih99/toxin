@@ -39,6 +39,20 @@ $(document).ready(
                     .prop("disabled", false);
                 counter.val(v);
             }
-    )
+        )
+        // change handler
+        $(".spin__counter").change(
+            function (e) {
+                $(this).val(
+                    (elem, v) => Math.max(0,v)
+                );
+                if($(this).val()<=0) {
+                    $(this)
+                      .parent()
+                      .find(".spin__button_minus")
+                      .prop("disabled", true);
+                }
+            }
+        )
     }
 )
