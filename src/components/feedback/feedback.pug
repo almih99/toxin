@@ -1,11 +1,13 @@
-mixin feedback(photo, name, date, likes, isChecked)
-  .feedback
+include ../like-button/like-button.pug
+
+mixin feedback(photo, name, date, likebtnName, likes, isChecked, feedbackAttr)
+  .feedback&attributes(feedbackAttr)
     .feedback__header
       img.feedback__image(src=photo width="48" height="48" alt="User avatar")
       .feedback__name= name
       .feedback__date= date
     .feedback__body
       .feedback__like
-        +like-button("lb", likes, isChecked)
+        +like-button(likebtnName, likes, isChecked)
       .feedback__text
         block
