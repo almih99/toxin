@@ -1,6 +1,16 @@
-mixin date-range-dropdown
-  .dropdown.date-range-dropdown&attributes(attributes)
-    input.dropdown__show.date-range-dropdown__trigger(type="checkbox" id=Id.nextId())
-    label.dropdown__label.date-range-dropdown__label(for=Id.id()) Выберите даты
-    .dropdown__content.date-range-dropdown__content
-      +calendar(data-range="true" data-date-format="dd M" data-multiple-dates-separator=" - ")
+mixin date-range-dropdown(name, labelContent="Выберите даты", dropdownAttr, calAttr)
+  +dropdown(
+    labelContent,
+    join({class: "date-range-dropdown"}, dropdownAttr),
+    {class: "date-range-dropdown__trigger"},
+    {},
+    {class: "date-range-dropdown__label"},
+    {class: "date-range-dropdown__content"})
+    +calendar(
+      name, 
+      {}, 
+      join({
+        'data-range': "true",
+        'data-date-format': "dd M",
+        'data-multiple-dates-separator': " - ",
+        }, calAttr))
