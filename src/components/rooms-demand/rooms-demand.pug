@@ -13,6 +13,6 @@ mixin rooms-demand
     input.dropdown__show(type="checkbox" id=Id.nextId())
     label.dropdown__label.room-demand__label(for=Id.id())= "2 спальни, 2 кровати, 0 ванных комнат"
     .dropdown__content
-      +spin("bedrooms", 2)(class="room-demand__spin") Спальни
-      +spin("beds", 2)(class="room-demand__spin") Кровати
-      +spin("bathrooms", 0)(class="room-demand__spin") Ванные комнаты
+      +spin("bedrooms", 2, {class: "room-demand__spin"}) Спальни
+      +spin("beds", 2, {class: "room-demand__spin"}) Кровати
+      +spin("bathrooms", 0, {class: "room-demand__spin"}) Ванные комнаты

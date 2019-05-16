@@ -1,9 +1,8 @@
-mixin spin(name, value=0)
-  .spin&attributes(attributes)
-    .spin__lable
+mixin spin(name, value=0, spinAttrs, labelAttrs, leftBtnAttrs, fieldAttrs, rightBtnAttrs)
+  .spin&attributes(spinAttrs)
+    .spin__lable&attributes(labelAttrs)
       block
     .spin__controls
-      button(type="button").spin__button.spin__button_minus &minus;
-      input.spin__counter(type="text" name=name value=value)
-      button(type="button").spin__button.spin__button_plus +
-
+      button(type="button").spin__button.spin__button_minus&attributes(leftBtnAttrs) &minus;
+      input.spin__counter(type="text" name=name value=value)&attributes(fieldAttrs)
+      button(type="button").spin__button.spin__button_plus&attributes(rightBtnAttrs) +
