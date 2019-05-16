@@ -1,5 +1,6 @@
-mixin rich-checkbox(name, title)
-  .rich-checkbox
-    +checkbox(name=name class="rich-checkbox__checkbox")&attributes(attributes)
-      .rich-checkbox__title= title
-      block
+import ../checkbox/checkbox.pug
+
+mixin rich-checkbox(name, title, checked, rcbAttrs, cbAttrs)
+  +checkbox(name, checked, join({class: "rich-checkbox"}, rcbAttrs), cbattrs)
+    .rich-checkbox__title= title
+    block
