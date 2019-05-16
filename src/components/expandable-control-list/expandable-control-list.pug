@@ -1,6 +1,10 @@
-mixin expandable-control-list(initialValue)
-  .dropdown.expandable-control-list
-    input.dropdown__show(type="checkbox" id=Id.nextId())
-    label.dropdown__label.expandable-control-list__label(for=Id.id())= initialValue
-    .dropdown__content.expandable-control-list__content
+mixin expandable-control-list(text, eclAttrs, cboxAttr, backdropAttr, labelAttr, contentAttr)
+  +dropdown(
+    text,
+    join({class: "expandable-control-list"}, eclAttrs),
+    join({class: "expandable-control-list__show"}, cboxAttr),
+    join({class: "expandable-control-list__backdrop"}),
+    join({class: "expandable-control-list__label"}, labelAttr),
+    join({class: "expandable-control-list__content"}, contentAttr)
+  )
       block
