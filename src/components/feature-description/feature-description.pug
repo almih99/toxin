@@ -1,5 +1,5 @@
-mixin feature-description(iconURI, header, text)
-  .feature-description
+mixin feature-description(iconURI, header, text, fdAttrs)
+  .feature-description&attributes(fdAttrs)
     img.feature-description__image(src=iconURI alt=header width=48 height=48)
     .feature-description__header= header
     .feature-description__text= text
