@@ -2,8 +2,8 @@
 include ../text-field/text-field.pug
 include ../button/button.pug
 
-mixin login
-  .login
+mixin login(outerAttrs)
+  .login&attributes(outerAttrs)
     form
       .h1.login__heading Войти
       +text-field(
@@ -15,7 +15,7 @@ mixin login
         "Пароль",
         {class: "login__password-field", type: "password"})
       +button(
-        {class: "button_arrowed login__enter"},
+        {class: "button_arrowed login__enter", type: "submit"},
         {class: "button__label_arrowed"}) Войти
       .login__to-create-account
         .login__to-create-account-text.text Нет аккаунта на Toxin?
