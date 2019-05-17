@@ -1,4 +1,4 @@
-import ../checkbox/checkbox.pug
+include ../checkbox/checkbox.pug
 
 mixin rich-checkbox(name, title, checked, rcbAttrs, cbAttrs)
   +checkbox(name, checked, join({class: "rich-checkbox"}, rcbAttrs), cbattrs)

@@ -2,12 +2,13 @@ include ../double-date-dropdown/double-date-dropdown.pug
 include ../guest-counter/guest-counter.pug
 include ../button/button.pug
 
-mixin primary-search
-  .primary-search
-    .h1.primary-search__heading Найдём номера под ваши пожелания
-    .h3.primary-search__in-label Прибытие
-    .h3.primary-search__out-label Выезд
-    +double-date-dropdown
-    .h3.primary-search__guest-label Гости
-    +guest-counter
-    +button({class: "button_arrowed primary-search__button"}, {class: "button__label_arrowed"}) Подобрать номер
+mixin primary-search(outerAttr)
+  .primary-search&attributes(outerAttr)
+    form
+      .h1.primary-search__heading Найдём номера под ваши пожелания
+      .h3.primary-search__in-label Прибытие
+      .h3.primary-search__out-label Выезд
+      +double-date-dropdown("searchcdates")
+      .h3.primary-search__guest-label Гости
+      +guest-counter
+      +button({class: "button_arrowed primary-search__button", type: "submit"}, {class: "button__label_arrowed"}) Подобрать номер
