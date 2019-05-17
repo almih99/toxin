@@ -2,8 +2,8 @@ include ../double-date-dropdown/double-date-dropdown.pug
 include ../guest-counter/guest-counter.pug
 include ../button/button.pug
 
-mixin room-booking (num, rank, price, dateIn, dateOut, amount, provize, extraprovize)
-  .room-booking
+mixin room-booking (num, rank, price, dateIn, dateOut, amount={text: "Сколько гостей", adult: 0, children: 0, babyes: 0}, cost={calculationText: "9 900₽ × 4 суток", calculated: "39960₽", discaunt: "2 179₽", additional: "300₽", total: "38 081₽"}, outerAttrs)
+  .room-booking&attributes(outerAttrs)
     form
       .room-booking__header-row.clearfix
         span.room-booking__header-row-left-side
@@ -15,19 +15,19 @@ mixin room-booking (num, rank, price, dateIn, dateOut, amount, provize, extrapro
           span.room-booking__price-period в сутки
       .h3.room-booking__in-label Прибытие
       .h3.room-booking__out-label Выезд
-      +double-date-dropdown("inoutdate", "19.08.2019", "23.08.2019")
+      +double-date-dropdown("inoutdate", dateIn, dateOut)
       .h3.room-booking__guest-label Гости
-      +guest-counter
+      +guest-counter(amount.text, amount.adult, amount.children, amount.babyes)
       .room-booking__info-block
         .room-booking__info-row
           .room-booking__col-1
-            span.room-booking__cost-calculation 9 900₽ &times; 4 суток
+            span.room-booking__cost-calculation= cost.calculationText
           .room-booking__col-2
           .room-booking__col-3
-            span.room-booking__cost-calculated 39960₽
+            span.room-booking__cost-calculated= cost.calculated
         .room-booking__info-row
           .room-booking__col-1
-            span.room-booking__cost-provize Сбор за услуги: скидка 2&nbsp;179₽
+            span.room-booking__cost-provize Сбор за услуги: скидка #{cost.discaunt}
           .room-booking__col-2
             a.room-booking__info-button(href="#")
           .room-booking__col-3
@@ -38,10 +38,10 @@ mixin room-booking (num, rank, price, dateIn, dateOut, amount, provize, extrapro
           .room-booking__col-2
             a.room-booking__info-button(href="#")
           .room-booking__col-3
-            span.room-booking__cost-calculated 300₽
+            span.room-booking__cost-calculated= cost.additional
       .room-booking__total-row
         .room-booking__total-row-title Итого
         .room-booking__total-row-line
-        .room-booking__total-row-total 38 081₽
+        .room-booking__total-row-total= cost.total
         
-      +button({class: "button_arrowed room-booking__button"}, {class: "button__label_arrowed"}) Забронировать
+      +button({class: "button_arrowed room-booking__button", type: "submit"}, {class: "button__label_arrowed"}) Забронировать
