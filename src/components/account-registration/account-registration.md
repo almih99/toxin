@@ -1,4 +1,4 @@
-# Имя элемента
+# account-registration
 
 ## Назначение
 
