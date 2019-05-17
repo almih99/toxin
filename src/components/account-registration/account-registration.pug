@@ -4,8 +4,8 @@ include ../date-text-field/date-text-field.pug
 include ../toggle/toggle.pug
 include ../button/button.pug
 
-mixin account-registration
-  .account-registration
+mixin account-registration(outerAttrs)
+  .account-registration&attributes(outerAttrs)
     form
       .h1.account-registration__heading Регистрация аккаунта
       +text-field(
@@ -37,7 +37,8 @@ mixin account-registration
         {class: "account-registration__password-field", type: "password"}
       )
       +toggle("recievoffers") Получать спецпредложения
-      +button({class: "button_arrowed account-registration__go-to-pay-button"}, {class: "button__label_arrowed"}) Перейти к оплате
+      +button({class: "button_arrowed account-registration__go-to-pay-button", type: "submit"}, {class: "button__label_arrowed"}) Перейти к оплате
       .account-registration__to-login
         .account-registration__to-login-text.text Уже есть аккаунт на Toxin
         +button({class: "account-registration__enter-button"}, {class: "button__label_white account-registration__enter-button-label"}) Войти
+
