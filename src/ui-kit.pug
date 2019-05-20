@@ -24,6 +24,7 @@ include components/subscription-text-field/subscription-text-field.pug
 include components/feature-description/feature-description.pug
 include components/rich-checkbox/rich-checkbox.pug
 include components/feedback/feedback.pug
+include components/image-slider/image-slider.pug
 
 include components/primary-search/primary-search.pug
 include components/account-registration/account-registration.pug
@@ -163,3 +164,10 @@ html(lang="ru")
           +login
       .column 
         +separator("Room card")
+          +image-slider([
+            "img/slides/1.png",
+            "img/slides/2.png",
+            "img/slides/3.png",
+            "img/slides/4.png"
+          ])
+    

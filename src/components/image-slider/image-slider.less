@@ -1,0 +1,79 @@
+@import "Carousel-Plugin-jQuery-RV-Gallery/dist/RV-gallery.min.css";
+
+.image-slider {
+    // width: 270px;
+
+    .gallery-row {
+        box-shadow: none;
+    }
+
+    .g_img-cont .big-arrows {
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .g_img-cont .big-arrows:hover {
+        opacity: 1;
+    }
+
+    .g_img-cont .big-arrows > :first-child {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+            opacity: 1;
+    }
+
+    .g_img-cont .big-arrows > :first-child:hover {
+        transform: none;
+    }
+
+    .g_img-cont .big-arrows > :last-child {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        opacity: 1;
+    }
+
+    .g_img-cont .big-arrows > :last-child:hover {
+        transform: none;
+    }
+
+
+    &__arrow-left {
+        display: block;
+        width: 8px;
+        height: 13px;
+        background-image: url(image-slider-back.svg)
+    }
+
+    &__arrow-right {
+        display: block;
+        width: 8px;
+        height: 13px;
+        background-image: url(image-slider-forward.svg)
+    }
+
+    .dots {
+        justify-content: flex-end;
+        padding-bottom: 10px;
+        pointer-events: none;
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            margin: 0 2px;
+            background: transparent;
+            border: solid 1px white;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .dot-active {
+            background: white;
+        }
+
+        :last-child {
+            margin-right: 15px;
+        }
+    }
+}

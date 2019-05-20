@@ -32,3 +32,4 @@ require("./components/calendar/calendar.js");
 require("./components/date-dropdown/date-dropdown.js");
 require("./components/double-date-dropdown/double-date-dropdown.js");
 require("./components/date-range-dropdown/date-range-dropdown.js");
+require("./components/image-slider/image-slider.js");

@@ -1,0 +1,4 @@
+mixin image-slider (imgURLList, outerAttrs)
+  .image-slider.gallery&attributes(outerAttrs)
+    each url in imgURLList
+      img.gallery-item(src= url)
