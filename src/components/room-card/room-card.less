@@ -1,0 +1,98 @@
+@import "../image-slider/image-slider.less";
+@import "../rate-button/rate-button.less";
+
+.room-card {
+    width: 270px;
+    background-color: @white;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    &__num-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        text-decoration: none;
+        margin-top: 22px;
+        margin-left: 19px;
+        margin-right: 18px;
+    }
+
+    &__number-sign{
+        display: inline;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: @dark-100;
+    }
+
+    &__number{
+        display: inline;
+        font-family: 'Montserrat-Bold', sans-serif;
+        color: @dark-100;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    &__number-rank{
+        display: inline;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        color: @purple;
+        text-transform: uppercase;
+    }
+
+    &__price{
+        display: inline;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: @dark-50;
+    }
+
+    &__price-period {
+        display: inline;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        color: @dark-50;
+    }
+
+    &__separator {
+        margin-left: 20px;
+        margin-right: 20px;
+        border: none;
+        height: 1px;
+        color: @dark-10;
+        background: @dark-10;
+    }
+
+    &__feedback-row {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 18px;
+        margin-top: 9px;
+        align-items: center;
+    }
+    
+    &__feedback-col {
+        text-decoration: none;
+    }
+
+    &__feedback-num{
+        display: inline;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: @dark-50;
+    }
+
+    &__feedback-unit{
+        display: inline;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: @dark-50;
+    }
+}

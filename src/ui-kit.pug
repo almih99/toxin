@@ -30,6 +30,7 @@ include components/primary-search/primary-search.pug
 include components/account-registration/account-registration.pug
 include components/room-booking/room-booking.pug
 include components/login/login.pug
+include components/room-card/room-card.pug
 
 mixin separator(title)
   .separator 
@@ -46,6 +47,7 @@ html(lang="ru")
       .column-holder {display: flex; width:100%; justify-content: space-between;}
       .column {padding: 10px; width: 30%;}
       .separator {margin-top: 30px}
+      .wide-column {width: 1440px;}
     link-off(href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Quicksand:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet")
     link(href="index.less" rel="stylesheet" type="text/css")
   body
@@ -163,11 +165,16 @@ html(lang="ru")
         +separator("Account enter")
           +login
       .column 
-        +separator("Room card")
+        +separator("image-slider")
           +image-slider([
             "img/slides/1.png",
             "img/slides/2.png",
             "img/slides/3.png",
             "img/slides/4.png"
           ])
+
+        +separator("Room card")
+          +room-card("886", "Люкс", "#", ["img/slides/1.png", "img/slides/2.png", "img/slides/3.png", "img/slides/4.png"], "9 990 ₽", 4, 65)
+    .wide-column
+      +separator("main-menu")
     

@@ -1,0 +1,19 @@
+include ../image-slider/image-slider.pug
+
+mixin room-card(number, rank, linkTo, images, price, stars, feedbacks, outerAttr)
+  .room-card&attributes(outerAttr)
+    +image-slider(images)
+    a.room-card__num-row(href=linkTo)
+      .room-card__number-column
+        .room-card__number-sign №
+        .room-card__number.text= number
+        .room-card__number-rank= rank
+      .room-card__price-column
+        .room-card__price= price
+        .room-card__price-period в сутки
+    hr.room-card__separator
+    .room-card__feedback-row
+      +rate-button("rate"+number, stars)
+      a.room-card__feedback-col(href=linkTo)
+        .room-card__feedback-num= feedbacks
+        .room-card__feedback-unit Отзывов
