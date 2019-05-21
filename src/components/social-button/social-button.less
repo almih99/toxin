@@ -1,0 +1,31 @@
+.social-button {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:hover {
+        .focused();
+    }
+
+    &:focus {
+        .focused();
+    }
+
+    &:active {
+        .active();
+    }
+
+    &_twitter {
+        background-image: url(twitter.svg);
+    }
+
+    &_facebook{
+        background-image: url(facebook.svg);
+    }
+
+    &_instagram {
+        background-image: url(instagam.svg);
+    }
+}

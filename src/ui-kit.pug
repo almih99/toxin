@@ -230,3 +230,39 @@ html(lang="ru")
               +button({}, {class: "button__label_white horizontal-menu__button-label"}) login
             li.horizontal-menu__item
               +button({}, {class: "horizontal-menu__button-label"}) register
+      +separator("big-footer")
+        .big-footer
+          .big-footer__body
+            .big-footer__common-info
+              a.toxin-logo.horizontal-menu__logo(href="#")
+              .big-footer__common-info-text
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, repellat labore nesciunt laudantium quis.
+            .big-footer__links
+              h3.h3 NAVIGATION
+              a.big-footer__link(href="#") About Us
+              a.big-footer__link(href="#") News
+              a.big-footer__link(href="#") Support
+              a.big-footer__link(href="#") Products
+            .big-footer__links
+              h3.h3 AOUT US
+              a.big-footer__link(href="#") Who we are
+              a.big-footer__link(href="#") Our team
+              a.big-footer__link(href="#") Careers
+              a.big-footer__link(href="#") Investors
+            .big-footer__links
+              h3.h3 SUPPORT
+              a.big-footer__link(href="#") Documentation
+              a.big-footer__link(href="#") Community
+              a.big-footer__link(href="#") Get in touch
+            .big-footer__subscribe
+              h3.h3 SUBSCRIBE TO OUR NEWSLETTER
+              .big-footer__subscribe-text
+                Receive our latest news and promotions in your inbox!
+              +subscription-text-field("stf", "Email", {}, {}, {onclick: "alert('ok')"})
+          .big-footer__footer
+            .big-footer__footer-text
+              Copyright &copy; 2018 Toxin UI Kit. All rights reserved.
+            .big-footer__footer-social
+              a.social-button.social-button_twitter(href="#")
+              a.social-button.social-button_facebook(href="#")
+              a.social-button.social-button_instagram(href="#")
