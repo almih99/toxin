@@ -1,0 +1,38 @@
+include ../subscription-text-field/subscription-text-field.pug
+
+mixin toxin-big-footer(outerAttrs)
+  .big-footer&attributes(outerAttrs)
+    .big-footer__body
+      .big-footer__common-info
+        a.toxin-logo.big-footer__logo(href="#")
+        .big-footer__common-info-text.
+          Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      .big-footer__links
+        h3.h3.big-footer__h3 Навигация
+        a.big-footer__link(href="#") О нас
+        a.big-footer__link(href="#") Новости
+        a.big-footer__link(href="#") Служба поддержки
+        a.big-footer__link(href="#") Услуги
+      .big-footer__links
+        h3.h3.big-footer__h3 О нас
+        a.big-footer__link(href="#") О сервисе
+        a.big-footer__link(href="#") Наша команда
+        a.big-footer__link(href="#") Вакансии
+        a.big-footer__link(href="#") Инвесторы       
+      .big-footer__links
+        h3.h3.big-footer__h3 Служба поддержки
+        a.big-footer__link(href="#") Соглашения
+        a.big-footer__link(href="#") Сообщества
+        a.big-footer__link(href="#") Связь с нами
+      .big-footer__subscribe
+        h3.h3.big-footer__h3 Подписка
+        .big-footer__subscribe-text.
+          Получайте специальные предложения и новости сервиса
+        +subscription-text-field("feedback", "Email", {class: "big-footer__subscription-text-field"}, {}, {onclick: "alert('ok')"})
+    .big-footer__footer
+      .big-footer__footer-text.
+        Copyright © 2018 Toxin отель. Все права зачищены.
+      .big-footer__footer-socials
+        a.social-button.social-button_twitter(href="#")
+        a.social-button.social-button_facebook(href="#")
+        a.social-button.social-button_instagram(href="#")

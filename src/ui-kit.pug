@@ -32,6 +32,7 @@ include components/room-booking/room-booking.pug
 include components/login/login.pug
 include components/room-card/room-card.pug
 include components/toxin-main-menu/toxin-main-menu.pug
+include components/toxin-big-footer/toxin-big-footer.pug
 
 mixin separator(title)
   .separator 
@@ -183,41 +184,7 @@ html(lang="ru")
       +separator("main-menu with buttons")
         +toxin-main-menu
       +separator("big-footer")
-        .big-footer
-          .big-footer__body
-            .big-footer__common-info
-              a.toxin-logo.big-footer__logo(href="#")
-              .big-footer__common-info-text.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, repellat labore nesciunt laudantium quis curabitur cocils.
-            .big-footer__links
-              h3.h3.big-footer__h3 NAVIGATION
-              a.big-footer__link(href="#") About Us
-              a.big-footer__link(href="#") News
-              a.big-footer__link(href="#") Support
-              a.big-footer__link(href="#") Products
-            .big-footer__links
-              h3.h3.big-footer__h3 ABOUT US
-              a.big-footer__link(href="#") Who we are
-              a.big-footer__link(href="#") Our team
-              a.big-footer__link(href="#") Careers
-              a.big-footer__link(href="#") Investors
-            .big-footer__links
-              h3.h3.big-footer__h3 SUPPORT
-              a.big-footer__link(href="#") Documentation
-              a.big-footer__link(href="#") Community
-              a.big-footer__link(href="#") Get in touch
-            .big-footer__subscribe
-              h3.h3.big-footer__h3 SUBSCRIBE TO OUR NEWSLETTER
-              .big-footer__subscribe-text.
-                Receive our latest news and promotions in your inbox!
-              +subscription-text-field("feedback", "Your email address", {class: "big-footer__subscription-text-field"}, {}, {onclick: "alert('ok')"})
-          .big-footer__footer
-            .big-footer__footer-text.
-              Copyright &copy; 2018 Toxin UI Kit. All rights reserved.
-            .big-footer__footer-socials
-              a.social-button.social-button_twitter(href="#")
-              a.social-button.social-button_facebook(href="#")
-              a.social-button.social-button_instagram(href="#")
+        +toxin-big-footer
       +separator("small footer")
         .small-footer
           a.toxin-logo.small-footer__logo(href="#")
