@@ -1,0 +1,72 @@
+
+include ../date-range-dropdown/date-range-dropdown.pug
+include ../guest-counter/guest-counter.pug
+include ../slider/slider.pug
+include ../checkbox/checkbox.pug
+include ../rich-checkbox/rich-checkbox.pug
+include ../rooms-demand/rooms-demand.pug
+include ../expandable-control-list/expandable-control-list.pug
+
+mixin search-panel(outerAttrs)
+  .search-panel
+    form
+      h3.h3 Даты пребывания в отеле
+      +date-range-dropdown(
+        "daterange", 
+        undefined, 
+        {class: "search-panel__date-range-dropdown"})
+      h3.h3 Гости
+      +guest-counter(
+        "3 гостя, один младенец", 
+        3, 0, 1, 
+        {class: "search-panel__guest-counter"})
+      h3.h3 Диапазон цены
+      .search-panel__slider-wrapper
+        +slider(
+          "pricerange", 
+          0, 15000, 5000, 10000, 
+          {class: search-panel__slider})
+      .text.search-panel__text Стоимость за сутки пребывания в номере
+      h3.h3 Дополнительные возможности
+      .search-panel__checkboxes-wrapper
+        +checkbox(
+          "smoke-aval", 
+          false, 
+          {}, 
+          {disabled: true}) Можно курить
+        +checkbox(
+          "pets-aval", 
+          true) Можно с питомцами
+        +checkbox(
+          "guests-aval", 
+          true) Можно пригласить гостей<br>(до 10 человек)
+      h3.h3 Доступность
+      .search-panel__accessebility-wrapper
+        +rich-checkbox(
+          "wide", 
+          "Широкий коридор", 
+          false, 
+          {class: "search-panel__rich-cb"}).
+            Ширина коридора в номере не менее 91 см.
+        +rich-checkbox(
+          "accessebility",
+          "Помощник для инвалидов",
+          false,
+          {class: "search-panel__rich-cb"}).
+            На 1 этаже вас встретит специалист и проводит до номера.
+      h3.h3 Удобства номера
+      +rooms-demand(
+        "2 спальни, 2 кровати, 0 ванных комнат", 
+        2, 2, 0,
+        {class: "search-panel__rooms-demand"})
+      +expandable-control-list(
+          "Дополнительные удобства",
+          {class: "search-panel__expandable-control-list"})
+        +checkbox("require-breakfest") Завтрак
+        +checkbox("require-table", true) Письменный стол
+        +checkbox("require-baby-table", true) Стул для кормления
+        +checkbox("require-baby-bed", true) Кроватка
+        +checkbox("require-tv") Телевизор
+        +checkbox("require-shampoo") Шампунь
+        +checkbox("require-socks") Носки
+        +checkbox("require-clocks") Часы

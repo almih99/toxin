@@ -34,6 +34,7 @@ include components/room-card/room-card.pug
 include components/toxin-main-menu/toxin-main-menu.pug
 include components/toxin-big-footer/toxin-big-footer.pug
 include components/toxin-small-footer/toxin-small-footer.pug
+include components/search-panel/search-panel.pug
 
 mixin separator(title)
   .separator 
@@ -167,6 +168,8 @@ html(lang="ru")
           +room-booking(888, "люкс", "9 990", "20.08.2019", "24.08.2019")
         +separator("Account enter")
           +login
+        +separator("toxin-logo")
+          a.toxin-logo(href="#")
       .column 
         +separator("image-slider")
           +image-slider([
@@ -177,8 +180,8 @@ html(lang="ru")
           ])
         +separator("Room card")
           +room-card("886", "Люкс", "#", ["img/slides/1.png", "img/slides/2.png", "img/slides/3.png", "img/slides/4.png"], "9 990 ₽", 4, 65)
-        +separator("toxin-logo")
-          a.toxin-logo(href="#")
+        +separator("search-panel")
+          +search-panel
     .wide-column
       +separator("main-menu")
         +toxin-main-menu(true)
