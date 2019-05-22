@@ -9,9 +9,9 @@ mixin guest-counter(text="Сколько гостей", val1=0, val2=0, val3=0, 
     {},
     {class: "guest-counter__label"},
     {})
-      +spin("adults", 0, {class: "guest-counter__spin"}) Взрослые
-      +spin("children", 0, {class: "guest-counter__spin"}) Дети
-      +spin("babyes", 0, {class: "guest-counter__spin"}) Младенцы
+      +spin("adults", val1, {class: "guest-counter__spin"}) Взрослые
+      +spin("children", val2, {class: "guest-counter__spin"}) Дети
+      +spin("babyes", val3, {class: "guest-counter__spin"}) Младенцы
       .guest-counter__buttons-panel.clearfix
         +button({class: "button_tiny guest-counter__clear-button"}, {class: "button__label_tiny"}) Очистить
         +button({class: "button_tiny guest-counter__apply-button"}, {class: "button__label_tiny"}) Применить
