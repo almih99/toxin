@@ -33,6 +33,7 @@ include components/login/login.pug
 include components/room-card/room-card.pug
 include components/toxin-main-menu/toxin-main-menu.pug
 include components/toxin-big-footer/toxin-big-footer.pug
+include components/toxin-small-footer/toxin-small-footer.pug
 
 mixin separator(title)
   .separator 
@@ -186,11 +187,4 @@ html(lang="ru")
       +separator("big-footer")
         +toxin-big-footer
       +separator("small footer")
-        .small-footer
-          a.toxin-logo.small-footer__logo(href="#")
-          .small-footer__text.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eum sint, temporibus beatae odio pariatur
-          .small-footer__footer-socials
-            a.social-button.social-button_twitter(href="#")
-            a.social-button.social-button_facebook(href="#")
-            a.social-button.social-button_instagram(href="#")
+        +toxin-small-footer
