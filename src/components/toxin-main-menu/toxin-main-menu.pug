@@ -1,0 +1,40 @@
+include ../button/button.pug
+
+mixin toxin-main-menu(isLogged=false, outerAttrs)
+  .horizontal-menu
+    a.toxin-logo.horizontal-menu__logo(href="#")
+    ul.horizontal-menu__main-list
+      li.horizontal-menu__item.horizontal-menu__item_current
+        a.horizontal-menu__link(href="#") О нас
+      li.horizontal-menu__item.horizontal-menu__item_dropdown
+        a.horizontal-menu__link(href="#") Услуги
+        ul.horizontal-menu__submenu-list.horizontal-menu__submenu-list_position_center
+          li.horizontal-menu__submenu-list-item
+            a.horizontal-menu__submenu-link(href="#") Парим
+          li.horizontal-menu__submenu-list-item
+            a.horizontal-menu__submenu-link(href="#") Варим
+          li.horizontal-menu__submenu-list-item
+            a.horizontal-menu__submenu-link(href="#") Жарим 
+      li.horizontal-menu__item
+        a.horizontal-menu__link(href="#") Вакансии
+      li.horizontal-menu__item
+        a.horizontal-menu__link(href="#") Новости
+      li.horizontal-menu__item.horizontal-menu__item_dropdown
+        a.horizontal-menu__link(href="#") Соглашения
+        ul.horizontal-menu__submenu-list.horizontal-menu__submenu-list_position_center
+          li.horizontal-menu__submenu-list-item
+            a.horizontal-menu__submenu-link(href="#") Об уплате алиментов
+          li.horizontal-menu__submenu-list-item
+            a.horizontal-menu__submenu-link(href="#") О расторжении договора
+          li.horizontal-menu__submenu-list-item
+            a.horizontal-menu__submenu-link(href="#") О разделе имущества
+      unless isLogged  
+        li.horizontal-menu__item
+          +button(
+            {},
+            {class: "button__label_white horizontal-menu__button-label"}) Войти
+        li.horizontal-menu__item
+          +button(
+            {},
+            {class: "horizontal-menu__button-label"}) Зарегистрироваться
+

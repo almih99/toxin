@@ -31,6 +31,7 @@ include components/account-registration/account-registration.pug
 include components/room-booking/room-booking.pug
 include components/login/login.pug
 include components/room-card/room-card.pug
+include components/toxin-main-menu/toxin-main-menu.pug
 
 mixin separator(title)
   .separator 
@@ -178,58 +179,9 @@ html(lang="ru")
           a.toxin-logo(href="#")
     .wide-column
       +separator("main-menu")
-        .horizontal-menu
-          a.toxin-logo.horizontal-menu__logo(href="#")
-          ul.horizontal-menu__main-list
-            li.horizontal-menu__item.horizontal-menu__item_current
-              a.horizontal-menu__link(href="#") Home
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") About Us
-            li.horizontal-menu__item.horizontal-menu__item_dropdown
-              a.horizontal-menu__link(href="#") Services
-              ul.horizontal-menu__submenu-list
-                li.horizontal-menu__submenu-list-item
-                  a.horizontal-menu__submenu-link(href="#") Uno
-                li.horizontal-menu__submenu-list-item
-                  a.horizontal-menu__submenu-link(href="#") Du
-                li.horizontal-menu__submenu-list-item
-                  a.horizontal-menu__submenu-link(href="#") Tre
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") Careers
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") News
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") Documentation
-            li.horizontal-menu__delimeter
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") Cosmin Negoita
+        +toxin-main-menu(true)
       +separator("main-menu with buttons")
-        .horizontal-menu
-          a.toxin-logo.big-footer__logo(href="#")
-          ul.horizontal-menu__main-list
-            li.horizontal-menu__item.horizontal-menu__item_current
-              a.horizontal-menu__link(href="#") Home
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") About Us
-            li.horizontal-menu__item.horizontal-menu__item_dropdown
-              a.horizontal-menu__link(href="#") Services
-              ul.horizontal-menu__submenu-list
-                li.horizontal-menu__submenu-list-item
-                  a.horizontal-menu__submenu-link(href="#") Uno
-                li.horizontal-menu__submenu-list-item
-                  a.horizontal-menu__submenu-link(href="#") Du
-                li.horizontal-menu__submenu-list-item
-                  a.horizontal-menu__submenu-link(href="#") Tre
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") Careers
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") News
-            li.horizontal-menu__item
-              a.horizontal-menu__link(href="#") Documentation
-            li.horizontal-menu__item
-              +button({}, {class: "button__label_white horizontal-menu__button-label"}) login
-            li.horizontal-menu__item
-              +button({}, {class: "horizontal-menu__button-label"}) register
+        +toxin-main-menu
       +separator("big-footer")
         .big-footer
           .big-footer__body
