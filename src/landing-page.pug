@@ -1,0 +1,21 @@
+doctype html
+
+//- components including
+include components/common.pug
+include components/toxin-main-menu/toxin-main-menu.pug
+include components/primary-search/primary-search.pug
+include components/toxin-big-footer/toxin-big-footer.pug
+
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Страница тестирования ui-kit
+    script(src="index.js")
+    link(href="index.less" rel="stylesheet" type="text/css")
+  body.landing-page
+    +toxin-main-menu
+    .landing-page__background
+      +primary-search({class: "landing-page__primary-search"})
+      .landing-page__motto.
+        Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +toxin-big-footer

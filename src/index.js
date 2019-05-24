@@ -1,3 +1,9 @@
+// pages:
+require("./ui-kit.pug");
+require ("./landing-page.pug");
+
+
+// jQueryUI components:
 
 // require('webpack-jquery-ui');
 // require('webpack-jquery-ui/css');
@@ -17,7 +23,6 @@ require('webpack-jquery-ui/slider');
 // require('webpack-jquery-ui/tabs');
 // require('webpack-jquery-ui/tooltip');
 
-import html from "./ui-kit.pug";
 
 /*
 components js import

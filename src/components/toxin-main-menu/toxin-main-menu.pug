@@ -31,10 +31,10 @@ mixin toxin-main-menu(isLogged=false, outerAttrs)
       unless isLogged  
         li.horizontal-menu__item
           +button(
-            {},
-            {class: "button__label_white horizontal-menu__button-label"}) Войти
+            {class: "horizontal-menu__enter-button"},
+            {class: "button__label_white horizontal-menu__enter-button-label"}) Войти
         li.horizontal-menu__item
           +button(
-            {},
-            {class: "horizontal-menu__button-label"}) Зарегистрироваться
+            {class: "horizontal-menu__register-button"},
+            {class: "horizontal-menu__register-button-label"}) Зарегистрироваться
 
