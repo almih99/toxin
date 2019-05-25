@@ -16,7 +16,7 @@ module.exports = (env, argv) => (
   devServer: {
     overlay: true,
     contentBase: './dist',
-    index: 'landing-page.html' // 'ui-kit.html'
+    index: 'links.html' // 'ui-kit.html'
   },
   devtool: argv.mode === 'production' ? false : 'inline-source-map',
   module: {
