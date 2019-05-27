@@ -25,6 +25,7 @@ include components/feature-description/feature-description.pug
 include components/rich-checkbox/rich-checkbox.pug
 include components/feedback/feedback.pug
 include components/image-slider/image-slider.pug
+include components/doughnut/doughnut.pug
 
 include components/primary-search/primary-search.pug
 include components/account-registration/account-registration.pug
@@ -91,6 +92,8 @@ html(lang="ru")
           +rate-button("first-rate", 3)
           <!-- --> &nbsp;&nbsp;&nbsp;
           +rate-button("secont-rate", 4)
+        +separator("doughnun")
+          +doughnut
       .column
         +separator('Range slider')
           +slider("sld", 0, 20000, 5000, 10000)
