@@ -300,7 +300,7 @@
         {
             alpha = y > 0 ? (1.5 * Math.PI + alpha) : (1.5 * Math.PI - alpha);
         }
-        console.log(alpha);
+        // console.log(alpha);
         var index = settings.sliceIndex;
         var angle = settings.slices[settings.sliceIndex].radians; // 0.5 * settings.slices[settings.sliceIndex].radians;
         while (alpha > angle)

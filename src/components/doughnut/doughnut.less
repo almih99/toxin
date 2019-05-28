@@ -1,0 +1,33 @@
+@import "../text/text.less";
+
+
+.doughnut {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    min-height: 124px;
+    padding-left: 130px;
+
+    &__chart {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__item {
+        position: relative;
+        .text;
+        padding-left: 36px;
+    }
+
+    &__mark {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 7px;
+        left: 20px;
+        background-color: lightgray;
+        border-radius: 50%;
+    }
+}
