@@ -1,0 +1,112 @@
+@import "components/h2/h2.less";
+@import "components/text/text.less";
+@import "components/toxin-main-menu/toxin-main-menu.less";
+@import "components/toxin-big-footer/toxin-big-footer.less";
+
+
+.room-details-page {
+    width: 1440px; // debug
+    padding: 0px;
+    margin: 0px;
+
+    &__image-group {
+        display: grid;
+        grid-template-columns: 68% 32%;
+        grid-template-rows: auto auto;
+        justify-items: stretch;
+        //align-items: start;
+    }
+
+    &__image-l {
+        object-fit: cover;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    &__image-rt {
+        object-fit: cover;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    &__image-rb {
+        object-fit: cover;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    &__main {
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-top: 55px;
+    }
+
+    &__splitter {
+        display: flex;
+    }
+
+    &__splitter-left-panel {
+        flex-grow: 1;
+    }
+
+    &__columns {
+        display: flex;
+    }
+
+    &__column {
+        max-width: 50%;
+        flex-grow: 1;
+    }
+
+    &__info-column {
+        max-width: 50%;
+        flex-grow: 1;
+    }
+
+    &__feature-description {
+        max-width: 280px;
+    }
+
+    &__feature-description_pul-up {
+        margin-top: -18px;
+    }
+
+    &__feature-description_no-line {
+        border-bottom: none;
+    }
+
+    &__chart-column {
+        max-width: 50%;
+        flex-grow: 1;
+        margin-left: -28px;
+    }
+    
+    &__chart {
+        padding-top: 2px;
+    }
+
+    &__feedback-header {
+        margin-top: 12px;
+        margin-bottom: 18px;
+    }
+
+    &__feedback {
+        max-width: 720px;
+        margin-bottom: 22px;
+    }
+
+    &__column_rules {
+        margin-left: 20px;
+    }
+
+
+    &__column_den {
+
+    }
+}

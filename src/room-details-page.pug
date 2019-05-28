@@ -1,0 +1,84 @@
+doctype html
+
+//- components including
+include components/common.pug
+include components/toxin-main-menu/toxin-main-menu.pug
+include components/feature-description/feature-description.pug
+include components/doughnut/doughnut.pug
+include components/feedback/feedback.pug
+include components/room-booking/room-booking.pug
+include components/toxin-big-footer/toxin-big-footer.pug
+
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Toxin
+    script(src="index.js")
+    link(href="index.less" rel="stylesheet" type="text/css")
+  body.room-details-page
+    +toxin-main-menu
+    .room-details-page__image-group
+      img.room-details-page__image-l(src="img/room/main.png")
+      img.room-details-page__image-rt(src="img/room/top.png")
+      img.room-details-page__image-rb(src="img/room/bottom.png")
+    main.room-details-page__main
+      .room-details-page__splitter
+        .room-details-page__splitter-left-panel
+          .room-details-page__columns
+            .room-details-page__info-column
+              h2.h2 Сведения о номере
+              +feature-description(
+                "img/icons/emoticon.svg",
+                "Комфорт",
+                "Шумопоглощающие стены",
+                {class: "room-details-page__feature-description room-details-page__feature-description_pul-up"})
+              +feature-description(
+                "img/icons/location_city.svg", 
+                "Удобство", 
+                "Окно в каждой из спален",
+                {class: "room-details-page__feature-description"})
+              +feature-description(
+                "img/icons/whatshot.svg", 
+                "Уют", 
+                "Номер оснащен камином",
+                {class: "room-details-page__feature-description room-details-page__feature-description_no-line"})
+            .room-details-page__chart-column
+              h2.h2 Впечатления от номера
+              +doughnut({class: "room-details-page__chart"})
+                +doughnut__item(522, '#FFBA9C') Великолепно
+                +doughnut__item(261, '#BC9CFF') Хорошо
+                +doughnut__item(260, '#6FCF97') Удовлетворительно
+                +doughnut__item(0, '#919191') Разочарован
+          h2.h2.room-details-page__feedback-header Отзывы посетителей номера
+          +feedback(
+            "img/avatars/user-2.jpg", 
+            "Мурад Сарафанов", 
+            "5 дней назад", "lb", 12, true,
+            {class: "room-details-page__feedback"}).
+            Великолепный матрас на кровати в основной спальне!
+            А пуфик вообще потрясающий.
+            И стены действительно, шумоподавляющие.
+            Выкрикивал комплименты повару &mdash; никто не жаловался из соседей.
+          +feedback(
+            "img/avatars/user-1.jpg", 
+            "Патрисия Стёклышкова", 
+            "Неделю назад", "lb", 2, false,
+            {class: "room-details-page__feedback"}).
+            Обслуживание на высоте! Всё аккуратно, чисто. 
+            Завтраки в номер советую заказать, 
+            каждый день новое блюдо и десерт как комплимент
+          .room-details-page__columns
+            .room-details-page__column.room-details-page__column_rules
+              h2.h2 Правила
+              ul.bullet-list
+                li.bullet-list__item Нельзя с питомцами
+                li.bullet-list__item Без вечеринок и мероприятий
+                li.bullet-list__item Время прибытия &mdash; после 13:00, а выезд до 12:00
+            .room-details-page__column.room-details-page__column_den
+              h2.h2 Отмена
+                .text.
+                  Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        .room-details-page__splitter-right-panel
+          +room-booking(888, "люкс", "9 990", "20.08.2019", "24.08.2019")
+    +toxin-big-footer

@@ -3,6 +3,7 @@ require("./links.pug");
 require("./ui-kit.pug");
 require ("./landing-page.pug");
 require ("./filter-page.pug");
+require ("./room-details-page.pug");
 
 
 // jQueryUI components:
