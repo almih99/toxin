@@ -1,9 +1,11 @@
 // pages:
 require("./links.pug");
 require("./ui-kit.pug");
-require ("./landing-page.pug");
-require ("./filter-page.pug");
-require ("./room-details-page.pug");
+require("./landing-page.pug");
+require("./filter-page.pug");
+require("./room-details-page.pug");
+require("./login-page.pug");
+require("./registration-page.pug");
 
 
 // jQueryUI components:
