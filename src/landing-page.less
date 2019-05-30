@@ -5,9 +5,11 @@
 @import "components/primary-search/primary-search.less";
 @import "components/toxin-big-footer/toxin-big-footer.less";
 
+@LandingCenteredTh: 800px;
+@LandingMinimized: 380px;
 
 .landing-page {
-    width: 1440px; // debug
+    // width: 1440px; // debug
     padding: 0px;
     margin: 0px;
 
@@ -19,6 +21,15 @@
         background-position: center;
         border-top: solid 1px transparent;
         margin-top: -1px;
+
+        @media (max-width: @LandingCenteredTh) {
+            min-height: 550px;;
+        }
+
+        @media (max-width: @LandingMinimized) {
+            min-height: 0;
+            background: none;
+        }
     }
 
     &__motto {
@@ -29,10 +40,40 @@
         min-height: 50px;
         .text;
         text-align: right;
+
+        @media (max-width: @LandingCenteredTh) {
+            right: 40px;
+        }
+
+        @media (max-width: @LandingMinimized) {
+            position: static;
+            width: 100%;
+            max-width: none;
+            min-height: 200px;
+            text-align: center;
+            background-image: url(img/landing-bg-sm.jpg);
+            background-size: cover;
+            background-position: center;
+            text-shadow: 0 0 3px white;
+        }
     }
 
     &__primary-search {
         margin-top: 70px;
         margin-left: 139px;
+
+        @media (max-width: @LandingCenteredTh) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: @LandingMinimized) {
+            margin-top: 0px;
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 100%;
+            border-radius: 0;
+            //box-shadow: none;
+        }
     }
 }
