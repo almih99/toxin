@@ -8,7 +8,17 @@ mixin primary-search(outerAttr)
       .h1.primary-search__heading Найдём номера под ваши пожелания
       .h3.primary-search__in-label Прибытие
       .h3.primary-search__out-label Выезд
-      +double-date-dropdown("searchcdates")
+      +double-date-dropdown(
+        "searchcdates",
+        undefined,
+        undefined,
+        {class: "primary-search__double-date-dropdown"})
       .h3.primary-search__guest-label Гости
-      +guest-counter
-      +button({class: "button_arrowed primary-search__button", type: "submit"}, {class: "button__label_arrowed"}) Подобрать номер
+      +guest-counter(
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        {class: "primary-search__guest-counter"}
+      )
+      +button({class: "button_arrowed primary-search__button", type: "submit"}, {class: "button__label_arrowed primary-search__button-lable"}) Подобрать номер
