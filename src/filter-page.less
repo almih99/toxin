@@ -1,5 +1,11 @@
+
+@FilterPageFoolwidthTH: 1400px;
+@FilterPageVerticalTH: 650px;
+@FilterPageCardsVerticalTH: 400px;
+
+
 .filter-page {
-    width: 1440px; // debug
+    // width: 1440px; // debug
     padding: 0px;
     margin: 0px;
 
@@ -9,15 +15,38 @@
         padding-right: 140px;
         padding-top: 30px;
         padding-bottom: 30px;
+
+        @media (max-width: @FilterPageFoolwidthTH) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media (max-width: @FilterPageVerticalTH) {
+            flex-direction: column;
+            padding-left: 0px;
+            padding-right: 10px;
+        }
+
+        @media (max-width: @FilterPageCardsVerticalTH) {
+            padding-right: 0;
+        }
+
+
     }
 
     &__search-panel {
         margin-top: -12px;
+        @media (max-width: @FilterPageVerticalTH) {
+            align-self: center;
+        }
     }
 
     &__results-panel {
         padding-left: 48px;
-        
+        @media (max-width: @FilterPageVerticalTH) {
+            padding-left: 0;
+            margin-top: 60px;
+        }
     }
 
     &__h1 {
@@ -31,15 +60,20 @@
         flex-direction: row;
         flex-wrap: wrap;
         // outline: dotted 1px red;
+
     }
 
     &__room-card{
         margin-left: 12px;
         margin-bottom: 20px;
         width: auto;
-        min-width: 230px;
+        min-width: 250px;
         flex-basis: 250px;
         flex-grow: 1;
+
+        @media (max-width: @FilterPageCardsVerticalTH) {
+            margin-left: 0;
+        }
     }
 
     &__pagination {
