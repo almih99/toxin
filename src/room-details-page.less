@@ -3,9 +3,13 @@
 @import "components/toxin-main-menu/toxin-main-menu.less";
 @import "components/toxin-big-footer/toxin-big-footer.less";
 
+@RoomDetailsPageFoolwidthTH: 1400px;
+@RoomDetailsPageColumnJoinTH: 1100px;
+@RoomDetailsPageVerticalTH: 800px;
+@RoomDetailsPageUltrathinTH: 400px;
 
 .room-details-page {
-    width: 1440px; // debug
+    //width: 1440px; // debug
     padding: 0px;
     margin: 0px;
 
@@ -45,28 +49,69 @@
         padding-left: 140px;
         padding-right: 140px;
         padding-top: 55px;
+
+        @media (max-width: @RoomDetailsPageFoolwidthTH) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media (max-width: @RoomDetailsPageUltrathinTH) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @media (max-width: @RoomDetailsPageUltrathinTH) {
+            padding-top: 0px;
+        }
     }
 
     &__splitter {
         display: flex;
+        @media (max-width: @RoomDetailsPageVerticalTH) {
+            flex-direction: column;
+        }
     }
 
     &__splitter-left-panel {
         flex-grow: 1;
+        @media (max-width: @RoomDetailsPageVerticalTH) {
+            order: 2;
+        }
+    }
+
+    &__splitter-right-panel {
+        @media (max-width: @RoomDetailsPageVerticalTH) {
+            order: 1;
+            align-self: center;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: @RoomDetailsPageUltrathinTH) {
+            width: 100%;
+        }
     }
 
     &__columns {
         display: flex;
+        @media (max-width: @RoomDetailsPageColumnJoinTH) {
+            flex-direction: column;
+        }
     }
 
     &__column {
         max-width: 50%;
         flex-grow: 1;
+        @media (max-width: @RoomDetailsPageColumnJoinTH) {
+            max-width: none;
+        }
     }
 
     &__info-column {
         max-width: 50%;
         flex-grow: 1;
+        @media (max-width: @RoomDetailsPageColumnJoinTH) {
+            max-width: none;
+        }
     }
 
     &__feature-description {
@@ -85,10 +130,16 @@
         max-width: 50%;
         flex-grow: 1;
         margin-left: -28px;
+        @media (max-width: @RoomDetailsPageColumnJoinTH) {
+            margin-left: 0;
+        }
     }
     
     &__chart {
         padding-top: 2px;
+        @media (max-width: @RoomDetailsPageUltrathinTH) {
+            transform: scale(0.8);
+        }
     }
 
     &__feedback-panel {
@@ -111,11 +162,16 @@
 
     &__column_rules {
         margin-left: 20px;
-        
+        @media (max-width: @RoomDetailsPageColumnJoinTH) {
+            margin-left: 0;
+        }
     }
 
     &__bullet-list {
         margin-left: -23px;
+        @media (max-width: @RoomDetailsPageColumnJoinTH) {
+            margin-left: 0;
+        }
     }
 
     &__bullet-list-item {
@@ -125,6 +181,10 @@
     &__column_den {
         margin-left: -49px;
         max-width: 350px;
+        @media (max-width: @RoomDetailsPageColumnJoinTH) {
+            margin-left: 0;
+            max-width: none;
+        }
     }
 
     &__footer {
@@ -133,5 +193,15 @@
 
     &__room-booking {
         margin-top: 15px;
+        @media (max-width: @RoomDetailsPageUltrathinTH) {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            box-shadow: none;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            margin-top: 0;
+        }
     }
 }
