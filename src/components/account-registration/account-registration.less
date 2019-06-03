@@ -6,6 +6,7 @@
 @import "../toggle/toggle.less";
 @import "../button/button.less";
 
+
 .account-registration {
     box-sizing: border-box;
     width: 380px;
@@ -60,18 +61,17 @@
     }
 
     &__to-login{
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__to-login-text {
-        line-height: 42px;
         color: black;
     }
 
     &__enter-button {
-        position: absolute;
-        right: 0;
-        top: 0;
+        width: 100px;
     }
 
     &__enter-button-label {
