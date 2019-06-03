@@ -15,9 +15,18 @@ mixin room-booking (num, rank, price, dateIn, dateOut, amount={text: "Сколь
           span.room-booking__price-period в сутки
       .h3.room-booking__in-label Прибытие
       .h3.room-booking__out-label Выезд
-      +double-date-dropdown("inoutdate", dateIn, dateOut)
+      +double-date-dropdown(
+        "inoutdate",
+        dateIn,
+        dateOut,
+        {class: "room-booking__double-date-dropdown"})
       .h3.room-booking__guest-label Гости
-      +guest-counter(amount.text, amount.adult, amount.children, amount.babyes)
+      +guest-counter(
+        amount.text, 
+        amount.adult, 
+        amount.children, 
+        amount.babyes,
+        {class: "room-booking__guest-counter"})
       .room-booking__info-block
         .room-booking__info-row
           .room-booking__col-1
@@ -44,4 +53,4 @@ mixin room-booking (num, rank, price, dateIn, dateOut, amount={text: "Сколь
         .room-booking__total-row-line
         .room-booking__total-row-total= cost.total
         
-      +button({class: "button_arrowed room-booking__button", type: "submit"}, {class: "button__label_arrowed"}) Забронировать
+      +button({class: "button_arrowed room-booking__button", type: "submit"}, {class: "button__label_arrowed room-booking__botton-label_arrowed"}) Забронировать
