@@ -1,5 +1,6 @@
 
 mixin checkbox(name, checked, checkboxAttrs, inputAttrs, labelAttrs, presentationAttrs)
+  // checkbox
   .checkbox&attributes(checkboxAttrs)
     input.checkbox__input(
       type="checkbox"
@@ -7,5 +8,6 @@ mixin checkbox(name, checked, checkboxAttrs, inputAttrs, labelAttrs, presentatio
       name=name
       checked=checked)&attributes(inputAttrs)
     label.checkbox__label(for=Id.id())&attributes(labelAttrs)
-      .checkbox__presentation&attributes(presentationAttrs)
+      span.checkbox__presentation&attributes(presentationAttrs)
       block
+  // /checkbox

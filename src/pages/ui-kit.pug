@@ -76,7 +76,7 @@ html(lang="ru")
         +separator("date-range-dropdown")
           +date-range-dropdown("daterange", undefined, {class: "ui-kit-date-range-dropdown"})
       .column
-        +separator('Checkbox buttons')
+        +separator('checkbox')
           +checkbox("myCheckbox", false, {}, {disabled: true}) Можно курить
           +checkbox("myCheckbox", "checked") Можно c питомцами
           +checkbox("myCheckbox") Можно пригласить гостей <br>(до 10 человек)
@@ -124,8 +124,8 @@ html(lang="ru")
             +pagination__button("#", "pagination__button_next")
     .column-holder
       .column
-        +separator("Expandable checkbox list")
-          +expandable-control-list("EXPANDABLE CHECKBOX LIST")
+        +separator("expandable-control-list")
+          +expandable-control-list("Дополнительные опции", {class: "ui-kit-expandable-control-list"})
             +checkbox("require-breakfest") Завтрак
             +checkbox("require-table") Письменный стол
             +checkbox("require-baby-table") Стул для кормления
