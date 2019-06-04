@@ -1,7 +1,11 @@
 mixin dropdown(text, dropdownAttr, cboxAttr, backdropAttr, labelAttr, contentAttr)
+  // dropdown
   .dropdown&attributes(dropdownAttr)
     input.dropdown__show(type="checkbox" id=Id.nextId())&attributes(cboxAttr)
     label.dropdown__backdrop(for=Id.id())&attributes(backdropAttr)
     label.dropdown__label(for=Id.id())&attributes(labelAttr)= text
+    // dropdown content
     .dropdown__content&attributes(contentAttr)
       block
+    // /dropdown content
+  // /dropdown
