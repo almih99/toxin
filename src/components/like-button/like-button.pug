@@ -1,4 +1,5 @@
 mixin like-button(name, likes=0, checked=false, likeAttrs, inputAttrs, labelAttrs, backgroundAttrs)
+  // like-button
   .like-button&attributes(likeAttrs)
     input.like-button__input(
       type="checkbox"
@@ -7,3 +8,4 @@ mixin like-button(name, likes=0, checked=false, likeAttrs, inputAttrs, labelAttr
       checked=checked)&attributes(inputAttrs)
     div.like-button__background-label&attributes(backgroundAttrs)
       label.like-button__label(for=Id.id())&attributes(labelAttrs)= likes
+  // /like-button

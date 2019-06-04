@@ -1,5 +1,6 @@
 
 mixin rate-button(name, value=3, rateAttributes)
+  // rate-button
   .rate-button&attributes(rateAttributes)
     - var count=0;
     while count<5
@@ -11,3 +12,4 @@ mixin rate-button(name, value=3, rateAttributes)
           checked=(count==value)
       )&attributes(attributes)
       label.rate-button__label(for=Id.id())
+  // /rate-button
