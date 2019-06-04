@@ -1,47 +1,21 @@
 // pages:
-require("./links.pug");
-require("./ui-kit.pug");
-require("./landing-page.pug");
-require("./filter-page.pug");
-require("./room-details-page.pug");
-require("./login-page.pug");
-require("./registration-page.pug");
+require("./pages/index.pug");
+require("./pages/index.js");
 
+require("./pages/ui-kit.pug");
+require("./pages/ui-kit.js");
 
-// jQueryUI components:
+require("./pages/landing-page.pug");
+require("./pages/landing-page.js");
 
-// require('webpack-jquery-ui');
-// require('webpack-jquery-ui/css');
+require("./pages/filter-page.pug");
+require("./pages/filter-page.js");
 
-// require('webpack-jquery-ui/accordion');
-// require('webpack-jquery-ui/autocomplete');
-// require('webpack-jquery-ui/button');
-// require('webpack-jquery-ui/checkboxradio');
-// require('webpack-jquery-ui/controlgroup');
-// require('webpack-jquery-ui/datepicker');
-// require('webpack-jquery-ui/dialog');
-// require('webpack-jquery-ui/menu');
-// require('webpack-jquery-ui/progressbar');
-// require('webpack-jquery-ui/selectmenu');
-require('webpack-jquery-ui/slider');
-// require('webpack-jquery-ui/spinner');
-// require('webpack-jquery-ui/tabs');
-// require('webpack-jquery-ui/tooltip');
+require("./pages/room-details-page.pug");
+require("./pages/room-details-page.js");
 
+require("./pages/login-page.pug");
+require("./pages/login-page.js");
 
-/*
-components js import
-*/
-
-require("./components/slider/slider.js");
-require("./components/date-text-field/date-text-field.js");
-require("./components/spin/spin.js");
-require("./components/rooms-demand/rooms-demand.js");
-require("./components/guest-counter/guest-counter.js");
-require("./components/calendar/calendar.js");
-require("./components/date-dropdown/date-dropdown.js");
-require("./components/double-date-dropdown/double-date-dropdown.js");
-require("./components/date-range-dropdown/date-range-dropdown.js");
-require("./components/image-slider/image-slider.js");
-require("./components/horizontal-menu/horizontal-menu.js");
-require("./components/doughnut/doughnut.js")
+require("./pages/registration-page.pug");
+require("./pages/registration-page.js");

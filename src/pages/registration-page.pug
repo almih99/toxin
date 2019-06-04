@@ -1,10 +1,10 @@
 doctype html
 
 //- components including
-include components/common.pug
-include components/toxin-main-menu/toxin-main-menu.pug
-include components/account-registration/account-registration.pug
-include components/toxin-big-footer/toxin-big-footer.pug
+include ../components/common.pug
+include ../components/toxin-main-menu/toxin-main-menu.pug
+include ../components/account-registration/account-registration.pug
+include ../components/toxin-big-footer/toxin-big-footer.pug
 
 html(lang="ru")
   head
@@ -12,7 +12,7 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title Toxin
     script(src="index.js")
-    link(href="index.less" rel="stylesheet" type="text/css")
+    link(href="../index.less" rel="stylesheet" type="text/css")
   body.account-registration-page
     +toxin-main-menu
     .account-registration-page__background

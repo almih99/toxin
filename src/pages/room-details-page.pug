@@ -1,13 +1,13 @@
 doctype html
 
 //- components including
-include components/common.pug
-include components/toxin-main-menu/toxin-main-menu.pug
-include components/feature-description/feature-description.pug
-include components/doughnut/doughnut.pug
-include components/feedback/feedback.pug
-include components/room-booking/room-booking.pug
-include components/toxin-big-footer/toxin-big-footer.pug
+include ../components/common.pug
+include ../components/toxin-main-menu/toxin-main-menu.pug
+include ../components/feature-description/feature-description.pug
+include ../components/doughnut/doughnut.pug
+include ../components/feedback/feedback.pug
+include ../components/room-booking/room-booking.pug
+include ../components/toxin-big-footer/toxin-big-footer.pug
 
 html(lang="ru")
   head
@@ -15,13 +15,13 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title Toxin
     script(src="index.js")
-    link(href="index.less" rel="stylesheet" type="text/css")
+    link(href="../index.less" rel="stylesheet" type="text/css")
   body.room-details-page
     +toxin-main-menu
     .room-details-page__image-group
-      img.room-details-page__image-l(src="img/room/main.png")
-      img.room-details-page__image-rt(src="img/room/top.png")
-      img.room-details-page__image-rb(src="img/room/bottom.png")
+      img.room-details-page__image-l(src="../img/room/main.png")
+      img.room-details-page__image-rt(src="../img/room/top.png")
+      img.room-details-page__image-rb(src="../img/room/bottom.png")
     main.room-details-page__main
       .room-details-page__splitter
         .room-details-page__splitter-left-panel
@@ -29,17 +29,17 @@ html(lang="ru")
             .room-details-page__info-column
               h2.h2 Сведения о номере
               +feature-description(
-                "img/icons/emoticon.svg",
+                "../img/icons/emoticon.svg",
                 "Комфорт",
                 "Шумопоглощающие стены",
                 {class: "room-details-page__feature-description room-details-page__feature-description_pul-up"})
               +feature-description(
-                "img/icons/location_city.svg", 
+                "../img/icons/location_city.svg", 
                 "Удобство", 
                 "Окно в каждой из спален",
                 {class: "room-details-page__feature-description"})
               +feature-description(
-                "img/icons/whatshot.svg", 
+                "../img/icons/whatshot.svg", 
                 "Уют", 
                 "Номер оснащен камином",
                 {class: "room-details-page__feature-description room-details-page__feature-description_no-line"})
@@ -54,7 +54,7 @@ html(lang="ru")
             .text.room-details-page__feedback-amount 2 отзыва
             h2.h2.room-details-page__feedback-header Отзывы посетителей номера
             +feedback(
-              "img/avatars/user-2.jpg", 
+              "../img/avatars/user-2.jpg", 
               "Мурад Сарафанов", 
               "5 дней назад", "lb", 12, true,
               {class: "room-details-page__feedback"}).
@@ -63,7 +63,7 @@ html(lang="ru")
               И стены действительно, шумоподавляющие.
               Выкрикивал комплименты повару &mdash; никто не жаловался из соседей.
             +feedback(
-              "img/avatars/user-1.jpg", 
+              "../img/avatars/user-1.jpg", 
               "Патрисия Стёклышкова", 
               "Неделю назад", "lb", 2, false,
               {class: "room-details-page__feedback"}).
