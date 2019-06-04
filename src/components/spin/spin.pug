@@ -1,4 +1,5 @@
 mixin spin(name, value=0, spinAttrs, labelAttrs, leftBtnAttrs, fieldAttrs, rightBtnAttrs)
+  // spin
   .spin&attributes(spinAttrs)
     .spin__lable&attributes(labelAttrs)
       block
@@ -6,3 +7,4 @@ mixin spin(name, value=0, spinAttrs, labelAttrs, leftBtnAttrs, fieldAttrs, right
       button(type="button").spin__button.spin__button_minus&attributes(leftBtnAttrs) &minus;
       input.spin__counter(type="text" name=name value=value)&attributes(fieldAttrs)
       button(type="button").spin__button.spin__button_plus&attributes(rightBtnAttrs) +
+  // /spin
