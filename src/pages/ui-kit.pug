@@ -47,20 +47,13 @@ html(lang="ru")
     meta(charset="utf-8")
     title Страница тестирования ui-kit
     script(src="index.js")
-    style.
-      *- {outline: dotted 1px blue;}
-      .column-holder {display: flex; width:100%; justify-content: space-between;}
-      .column {padding: 10px; width: 30%;}
-      .separator {margin-top: 30px}
-      .wide-column {width: 1440px;}
-    link-off(href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Quicksand:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet")
     link(href="../index.less" rel="stylesheet" type="text/css")
   body
     h1.h1 Страница тестирования и отладки элементов интерфейса 
     .column-holder
       .column
-        +separator("Text field")
-          +text-field("email", "Email")
+        +separator("text-field")
+          +text-field("email", "Email", {class: "ui-kit-text-field"})
         +separator("Subscription text field")
           +subscription-text-field("stf", "Email", {}, {}, {onclick: "alert('ok')"})
         +separator("Masked text field")
