@@ -1,4 +1,5 @@
 mixin toggle(name, checked, toggleAttrs, inputAttrs, labelAttrs, presentationAttrs)
+  // toggle
   .toggle&attributes(toggleAttrs)
     input.toggle__input(
       type="checkbox" 
@@ -6,5 +7,6 @@ mixin toggle(name, checked, toggleAttrs, inputAttrs, labelAttrs, presentationAtt
       name=name
       checked=checked)&attributes(inputAttrs)
     label.toggle__label(for=Id.id())&attributes(labelAttrs)
-      .toggle__presentation&attributes(presentationAttrs)
+      span.toggle__presentation&attributes(presentationAttrs)
       block
+  // /toggle
