@@ -66,15 +66,15 @@ html(lang="ru")
             {onclick: "alert('ok')"})
         +separator("date-text-field")
           +date-text-field(undefined, undefined, undefined, {class: "ui-kit-date-text-field"})
-        +separator("Dropdown")
+        +separator("dropdown")
           +dropdown("initial content", {class: "ui-kit-dropdown"})
             p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cupiditate ipsum obcaecati repellendus accusantium praesentium natus nihil excepturi quia.
-        +separator("Date dropdown")
-          +date-dropdown("myname")
-        +separator("Double date dropdown")
-          +double-date-dropdown("someother")
-        +separator("Date range dropdown")
-          +date-range-dropdown
+        +separator("date-dropdown")
+          +date-dropdown("myname", undefined, {class: "ui-kit-date-dropdown"})
+        +separator("double-date-dropdown")
+          +double-date-dropdown("someother", undefined, undefined, {class: "ui-kit-double-date-dropdown"})
+        +separator("date-range-dropdown")
+          +date-range-dropdown("daterange", undefined, {class: "ui-kit-date-range-dropdown"})
       .column
         +separator('Checkbox buttons')
           +checkbox("myCheckbox", false, {}, {disabled: true}) Можно курить

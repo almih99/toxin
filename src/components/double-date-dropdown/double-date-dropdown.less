@@ -3,9 +3,19 @@
 .double-date-dropdown {
     display: flex;
     justify-content: space-between;
-    width: 320px;
+    // width: 320px;
+
+    &__from-field {
+        flex-grow: 1;
+    }
+
+    &__strut {
+        width: 20px;
+        flex-shrink: 0;
+    }
 
     &__to-field {
+        flex-grow: 1;
         .date-dropdown__content {
             right: 0;
         }
