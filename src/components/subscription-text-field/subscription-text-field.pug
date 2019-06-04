@@ -1,10 +1,11 @@
 include ../text-field/text-field.pug
 
 mixin subscription-text-field(name, placeholder, stfAttributes, textAttributes, buttonAttributes)
+  // subscription-text-field
   .subscription-text-field&attributes(stfAttributes)
     +text-field(
       name, 
       placeholder, 
       join({class: "subscription-text-field__text"}, textAttributes))
-    //input.text-field.subscription-text-field__text(type="text")&attributes(textAttributes)
     button.subscription-text-field__button(type="button")&attributes(buttonAttributes)
+  // /subscription-text-field

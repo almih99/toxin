@@ -53,9 +53,17 @@ html(lang="ru")
     .column-holder
       .column
         +separator("text-field")
-          +text-field("email", "Email", {class: "ui-kit-text-field"})
-        +separator("Subscription text field")
-          +subscription-text-field("stf", "Email", {}, {}, {onclick: "alert('ok')"})
+          +text-field(
+            "email", 
+            "Email", 
+            {class: "ui-kit-text-field"})
+        +separator("subscription-text-field")
+          +subscription-text-field(
+            "stf", 
+            "Email", 
+            {class: "ui-kit-subscription-text-field"}, 
+            {}, 
+            {onclick: "alert('ok')"})
         +separator("Masked text field")
           +date-text-field
         +separator("Dropdown")
