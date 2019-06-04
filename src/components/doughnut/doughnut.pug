@@ -1,7 +1,11 @@
 mixin doughnut(outerAttrs)
+  // doughnut
   .doughnut&attributes(outerAttrs)
     .doughnut__chart
+    // doughnut legend
     block
+    // /doughnut legend
+  // /doughtnut
 
 mixin doughnut__item(amount=1, color="red")
   .doughnut__item(data-amount=amount data-color=color)
