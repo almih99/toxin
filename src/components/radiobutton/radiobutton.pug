@@ -1,4 +1,5 @@
 mixin radiobutton(name, value, checked, radioAttrs, inputAttrs, labelAttrs, presentationAttrs)
+  // radiobutton
   .radiobutton&attributes(radioAttrs)
     input.radiobutton__input(
       type="radio" 
@@ -7,5 +8,6 @@ mixin radiobutton(name, value, checked, radioAttrs, inputAttrs, labelAttrs, pres
       value=value
       checked=checked)&attributes(inputAttrs)
     label.radiobutton__label(for=Id.id())&attributes(labelAttrs)
-      .radiobutton__presentation&attributes(presentationAttrs)
+      span.radiobutton__presentation&attributes(presentationAttrs)
       block
+  // radiobutton
