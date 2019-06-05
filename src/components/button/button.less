@@ -1,11 +1,20 @@
 .button {
-  display: inline-block;
+  position: relative;
+  display: block;
   box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  padding: 0 20px;;
   border: none;
   border-radius: 22px;
-  padding: 2px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  width: 100%;
+  white-space: nowrap;
+  color: @white;
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  z-index: 0;
 
   &:focus {
     .focused();
@@ -21,50 +30,47 @@
     cursor: auto;
   }
 
-  &__label {
-    display: inline-block;
-    white-space: nowrap;
-    color: white;
-    padding: 0px 15px;
-    //font-family: 'Montserrat', sans-serif;
-    font-family: 'Montserrat-Bold', sans-serif;
-    font-weight: bold;
-    line-height: 40px;
-    font-size: 12px;
-    text-transform: uppercase;
-    width: 100%;
-    box-sizing: border-box;
-  }
+  // модификатор для белого цвета фона
 
-  // for making gradient outline
-  &__label_white {
+  &_white {
     color: @purple;
-    border-radius: 18px;
-    background-color: @bg-color;
   }
 
-  // for link-like buttons
+  &_white::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    top: 2px;
+    left: 2px;
+    border-radius: 20px;
+    z-index: -1;
+    background-color: @white;
+  }
+
+  // модификатор для маленькой кнопки без фона
+
   &_tiny {
     background: none;
-    line-height: 18px;
-  }
-
-  &__label_tiny {
+    height: 18px;
     color: @purple;
     padding: 0px 5px;
-    line-height: 18px;
   }
 
-  // for label with arrow
-  &__label_arrowed {
-    position: relative;
-    box-sizing: border-box;
-    // width: 316px;
-    background-image: url(button_arrow.svg);
+  // модификатор для кнопки со стрелкой
+
+  &_arrowed::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-image:  url(button_arrow.svg);
     background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
   }
-
-
-
 }

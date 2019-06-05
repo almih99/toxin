@@ -1,8 +1,4 @@
 
-mixin button(btnAttr, lblAttr)
-  -
-    var battr = join({type: "button"}, btnAttr);
-    var lattr = join({}, lblAttr)
-  button.button&attributes(battr)
-    span.button__label&attributes(lattr)
-      block
+mixin button(btnAttr)
+  button.button&attributes(join({type: "button"}, btnAttr))
+    block

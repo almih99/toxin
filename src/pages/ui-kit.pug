@@ -100,19 +100,19 @@ html(lang="ru")
             +doughnut__item(260, '#6FCF97') Удовлетворительно
             +doughnut__item(0, '#919191') Разочарован
       .column
-        +separator('Range slider')
+        +separator('slider')
           +slider("sld", 0, 20000, 5000, 10000)
-        +separator("Buttons")
-          +button click me
-          +button({disabled: "true"}) CLICK ME
+        +separator("button")
+          +button({class: "ui-kit-small-button"}) click me
+          +button({disabled: "true", class: "ui-kit-small-button"}) CLICK ME
         .separator
-          +button({}, {class: "button__label_white"}) CLICK ME
-          +button({disabled: "disabled"}, {class: "button__label_white"}) CLICK ME
+          +button({class: "button_white ui-kit-small-button"}) CLICK ME
+          +button({disabled: "disabled", class: "button_white ui-kit-small-button"}) CLICK ME
         .separator
-          +button({class: "button_tiny"}, {class: "button__label_tiny"}) click me
-          +button({class: "button_tiny", disabled: "disabled"}, {class: "button__label_tiny"}) click me
+          +button({class: "button_tiny ui-kit-small-button"}) click me
+          +button({class: "button_tiny ui-kit-small-button", disabled: "disabled"}) click me
         .separator
-          +button({class: "button_arrowed"}, {class: "button__label_arrowed"}) перейти к оплате
+          +button({class: "button_arrowed"}) перейти к оплате
         +separator("Pagination")
           +pagination("1-12 из 100+ вариантов аренды")
             +pagination__button("#", "pagination__button_prev")
