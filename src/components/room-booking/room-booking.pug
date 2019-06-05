@@ -13,8 +13,10 @@ mixin room-booking (num, rank, price, dateIn, dateOut, amount={text: "Сколь
         span.room-booking__header-row-right-side
           span.room-booking__price-rubles= price + "₽ "
           span.room-booking__price-period в сутки
-      .h3.room-booking__in-label Прибытие
-      .h3.room-booking__out-label Выезд
+      .room-booking__in-out-lables
+        .h3.room-booking__in-label Прибытие
+        .room-booking__stub
+        .h3.room-booking__out-label Выезд
       +double-date-dropdown(
         "inoutdate",
         dateIn,
