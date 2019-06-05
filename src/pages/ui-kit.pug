@@ -141,7 +141,12 @@ html(lang="ru")
             "2 спальни, 2 кровати, 0 ванных комнат", 2, 2, 0, 
             {class: "ui-kit-rooms-demand"})
         +separator("guest-counter")
-          +guest-counter
+          +guest-counter(
+            undefined, 
+            undefined, 
+            undefined, 
+            undefined, 
+            {class: "ui-kit-guest-counter"})
       .column
         +separator("Calendar")
           +calendar("simpleCal", {}, {'data-range': "true"})
