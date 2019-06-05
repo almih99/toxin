@@ -2,5 +2,5 @@ include ../checkbox/checkbox.pug
 
 mixin rich-checkbox(name, title, checked, rcbAttrs, cbAttrs)
   +checkbox(name, checked, join({class: "rich-checkbox"}, rcbAttrs), {}, {class: "rich-checkbox__checkbox-label"}, cbattrs)
-    .rich-checkbox__title= title
+    span.rich-checkbox__title= title
     block
