@@ -136,9 +136,11 @@ html(lang="ru")
       .column
         +separator("spin")
             +spin(pm, 1) Спальни
-        +separator("Dropdown")
-          +rooms-demand("2 спальни, 2 кровати, 0 ванных комнат", 2, 2, 0)
-        +separator("Dropdown")
+        +separator("rooms-demand")
+          +rooms-demand(
+            "2 спальни, 2 кровати, 0 ванных комнат", 2, 2, 0, 
+            {class: "ui-kit-rooms-demand"})
+        +separator("guest-counter")
           +guest-counter
       .column
         +separator("Calendar")
