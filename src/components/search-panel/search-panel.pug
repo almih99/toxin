@@ -8,7 +8,7 @@ include ../rooms-demand/rooms-demand.pug
 include ../expandable-control-list/expandable-control-list.pug
 
 mixin search-panel(outerAttrs)
-  .search-panel
+  .search-panel&attributes(outerAttrs)
     form
       h3.h3 Даты пребывания в отеле
       +date-range-dropdown(
