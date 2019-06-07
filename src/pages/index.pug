@@ -1,6 +1,36 @@
-p: a(href="ui-kit.html") UI kit
-p: a(href="landing-page.html") Landing page
-p: a(href="filter-page.html") Filter page
-p: a(href="room-details-page.html") Room details page
-p: a(href="login-page.html") Login page
-p: a(href="registration-page.html") Registration page
+doctype html
+
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Toxin
+    script(src="index.js")
+    link(href="../index.less" rel="stylesheet" type="text/css")
+  body.index
+    h1.h1 Страницы сайта проекта Toxin
+    .index__content
+      .index__item
+        a.index__link(href="landing-page.html")
+          p Landing page / Лэндинговая страница
+          img.index__image(src="../img/preview/landing.jpg" alt="landing-page")
+      .index__item
+        a.index__link(href="filter-page.html")
+          p Filter page / Страница поиска номера
+          img.index__image(src="../img/preview/filter.jpg" alt="filter-page")
+      .index__item
+        a.index__link(href="room-details-page.html")
+          p: Room details page / Страница описания номера
+          img.index__image(src="../img/preview/details.jpg" alt="filter-page")
+      .index__item
+        a.index__link(href="login-page.html")
+          p Login page / Страница входа в систему
+          img.index__image(src="../img/preview/details.jpg" alt="login-page")
+      .index__item
+        a.index__link(href="registration-page.html")
+          p Registration page / Страница регистрации в системе
+          img.index__image(src="../img/preview/signin.jpg" alt="login-page")
+      .index__item
+        a.index__link(href="ui-kit.html")
+          p UI kit / Набор блоков, использованных на странице
+          img.index__image(src="../img/preview/ui-kit.jpg" alt="login-page")
