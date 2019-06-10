@@ -1,6 +1,7 @@
 include ../button/button.pug
 
 mixin toxin-main-menu(isLogged=false, outerAttrs)
+  // toxin-main-menu
   nav.horizontal-menu
     a.toxin-logo.horizontal-menu__logo(href="#")
     button.horizontal-menu__toggle-view(type="button")
@@ -39,4 +40,4 @@ mixin toxin-main-menu(isLogged=false, outerAttrs)
         li.horizontal-menu__item
           +button(
             {class: "horizontal-menu__register-button"}) Зарегистрироваться
-
+  // /toxin-main-menu

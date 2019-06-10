@@ -5,6 +5,7 @@ include ../toggle/toggle.pug
 include ../button/button.pug
 
 mixin account-registration(outerAttrs)
+  // account-registration
   .account-registration&attributes(outerAttrs)
     form
       .h1.account-registration__heading Регистрация аккаунта
@@ -41,4 +42,4 @@ mixin account-registration(outerAttrs)
       .account-registration__to-login
         .account-registration__to-login-text.text Уже есть аккаунт на Toxin
         +button({class: "button_white account-registration__enter-button"}) Войти
-
+  // /account-registration

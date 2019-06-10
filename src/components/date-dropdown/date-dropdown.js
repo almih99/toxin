@@ -1,4 +1,6 @@
 
+require("../calendar/calendar.js");
+
 function onChange(e) {
     $(this)
         .closest(".date-dropdown")

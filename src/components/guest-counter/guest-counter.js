@@ -1,3 +1,5 @@
+require("../spin/spin.js");
+
 const guestForms = 
   ["гостей", "гость", "гостя", "гостя", "гостя", "гостей"];
 const childrenForms=

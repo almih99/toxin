@@ -2,6 +2,7 @@ include ../image-slider/image-slider.pug
 include ../rate-button/rate-button.pug
 
 mixin room-card(number, rank, linkTo, images, price, stars, feedbacks, outerAttr)
+  // room-card
   .room-card&attributes(outerAttr)
     +image-slider(images)
     a.room-card__num-row(href=linkTo)
@@ -18,3 +19,4 @@ mixin room-card(number, rank, linkTo, images, price, stars, feedbacks, outerAttr
       a.room-card__feedback-col(href=linkTo)
         .room-card__feedback-num= feedbacks
         .room-card__feedback-unit Отзывов
+  // /room-card

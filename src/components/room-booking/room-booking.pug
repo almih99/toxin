@@ -3,6 +3,7 @@ include ../guest-counter/guest-counter.pug
 include ../button/button.pug
 
 mixin room-booking (num, rank, price, dateIn, dateOut, amount={text: "Сколько гостей", adult: 0, children: 0, babyes: 0}, cost={calculationText: "9 900₽ × 4 суток", calculated: "39960₽", discaunt: "2 179₽", additional: "300₽", total: "38 081₽"}, outerAttrs)
+  // room-booking
   .room-booking&attributes(outerAttrs)
     form
       .room-booking__header-row.clearfix
@@ -56,3 +57,4 @@ mixin room-booking (num, rank, price, dateIn, dateOut, amount={text: "Сколь
         .room-booking__total-row-total= cost.total
         
       +button({class: "button_arrowed room-booking__button", type: "submit"}, {class: "button__label_arrowed room-booking__botton-label_arrowed"}) Забронировать
+  // /room-booking

@@ -1,0 +1,1 @@
+require("../image-slider/image-slider.js");

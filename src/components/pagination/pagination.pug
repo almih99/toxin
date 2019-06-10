@@ -8,8 +8,10 @@ mixin pagination__button(href="#", modifer, linkAttrs)
 
 mixin pagination(text, textAttrs)
   - var txtattr=join({}, textAttrs);
+  // pagination
   ul.pagination&attributes(lstattr)
     block
     li.pagination__text&attributes(txtattr)= text
+  // /pagination
     
     

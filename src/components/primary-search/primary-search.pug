@@ -3,6 +3,7 @@ include ../guest-counter/guest-counter.pug
 include ../button/button.pug
 
 mixin primary-search(outerAttr)
+  // primary-search
   .primary-search&attributes(outerAttr)
     form
       .h1.primary-search__heading Найдём номера под ваши пожелания
@@ -24,3 +25,4 @@ mixin primary-search(outerAttr)
         {class: "primary-search__guest-counter"}
       )
       +button({class: "button_arrowed primary-search__button", type: "submit"}) Подобрать номер
+  // /primary-search

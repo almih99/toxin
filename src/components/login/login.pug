@@ -3,6 +3,7 @@ include ../text-field/text-field.pug
 include ../button/button.pug
 
 mixin login(outerAttrs)
+  // login
   .login&attributes(outerAttrs)
     form
       .h1.login__heading Войти
@@ -21,3 +22,4 @@ mixin login(outerAttrs)
         .login__to-create-account-text.text Нет аккаунта на Toxin?
         +button(
           {class: "button_white login__create-account-button"}) Создать
+  // login

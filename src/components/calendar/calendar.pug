@@ -1,7 +1,11 @@
+include ../button/button.pug
+
 mixin calendar(name, calAttributes, datapeckerAttributes)
+  // calendar
   .calendar&attributes(calAttributes)
     input.calendar__result(type="hidden" name=name)
     .calendar__pane.datepicker-here&attributes(datapeckerAttributes)
     .calendar__button-box
       +button({class: "button_tiny calendar__clear-button calendar__button-label_gray"}) Очистить
       +button({class: "button_tiny calendar__apply-button"}) Применить
+  // /calendar

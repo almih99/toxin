@@ -1,6 +1,7 @@
 
 
 mixin slider(name, min, max, val1, val2, sliderAttrs)
+  // slider
   .slider(
   data-min=min 
   data-max=max 
@@ -10,3 +11,4 @@ mixin slider(name, min, max, val1, val2, sliderAttrs)
     input(type="hidden" name=name + "[0]")
     input(type="hidden" name=name + "[1]")
     .ui-slider
+  // /slider

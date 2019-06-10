@@ -1,3 +1,5 @@
+require("../date-dropdown/date-dropdown.js");
+
 
 function openStateChanged(e) {
     if($(this).prop("checked")) {
